@@ -25,7 +25,7 @@ function Footer() {
     link: 'https://wa.me/573145312045'
   }, {
     icono: 'email',
-    link: 'mailto:AlexanderMaturana76@gmail.com'
+    link: 'mailto:AlrxanderMaturana76@gmail.com'
   }];
   return /*#__PURE__*/React.createElement("footer", {
     className: "bg-ink py-16 lg:py-12"
