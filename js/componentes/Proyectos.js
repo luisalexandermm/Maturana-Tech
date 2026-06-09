@@ -4,7 +4,7 @@
       nombre: 'Vías del Chocó',
       descripcion: 'Plataforma colaborativa con información de vías en vivo. Ideal para mostrar resultados reales y confiables en línea.',
       imagen: 'assets/logos/viaschoco.png',
-      link: 'https://luisalexandermm.github.io/viaschoco/',
+      link: 'https://viaschoco.vercel.app/',
       tag: '⭐ Destacado',
       tecnologias: [
         { nombre: 'React', logo: 'assets/logos/react.png' },

@@ -46,14 +46,14 @@ function Contacto() {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
           {canales.map((canal, idx) => (
             <a 
               key={idx}
               href={canal.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-full max-w-[420px] box-border bg-white border border-border rounded-2xl p-8 lg:p-10 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fadeUp flex flex-col items-center ${canal.etiqueta === 'Correo electrónico' ? 'md:col-span-3 lg:col-span-2' : ''}`}
+              className={`w-full max-w-[420px] box-border bg-white border border-border rounded-2xl p-8 lg:p-10 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fadeUp flex flex-col items-center`}
               style={{ animationDelay: `${idx * 0.12}s` }}
             >
               <div className={`w-14 h-14 ${canal.bgIcon} rounded-2xl flex items-center justify-center text-2xl mb-4`}>

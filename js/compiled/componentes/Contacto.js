@@ -45,7 +45,7 @@ function Contacto() {
     href: canal.link,
     target: "_blank",
     rel: "noopener noreferrer",
-    className: `w-full max-w-[420px] box-border bg-white border border-border rounded-2xl p-8 lg:p-10 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fadeUp flex flex-col items-center ${canal.etiqueta === 'Correo electrónico' ? 'md:col-span-3 lg:col-span-2' : ''}`,
+    className: "w-full max-w-[420px] box-border bg-white border border-border rounded-2xl p-8 lg:p-10 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fadeUp flex flex-col items-center",
     style: {
       animationDelay: `${idx * 0.12}s`
     }
