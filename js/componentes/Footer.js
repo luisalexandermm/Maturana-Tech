@@ -10,7 +10,7 @@ function Footer() {
   const redes = [
     { icono: 'github', link: 'https://github.com/luisalexandermm' },
     { icono: 'whatsapp', link: 'https://wa.me/573145312045' },
-    { icono: 'email', link: 'mailto:AlexanderMaturana76@gmail.com' }
+    { icono: 'email', link: 'mailto:AlrxanderMaturana76@gmail.com' }
   ];
 
   return (

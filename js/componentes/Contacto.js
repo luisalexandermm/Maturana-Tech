@@ -19,9 +19,9 @@ function Contacto() {
     {
       icono: '✉️',
       etiqueta: 'Correo',
-      valor: 'AlexanderMaturana76@gmail.com',
+      valor: 'AlrxanderMaturana76@gmail.com',
       hint: 'Enviar email →',
-      link: 'mailto:AlexanderMaturana76@gmail.com',
+      link: 'mailto:AlrxanderMaturana76@gmail.com',
       bgIcon: 'bg-blue-dim'
     }
   ];
