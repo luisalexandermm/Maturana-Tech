@@ -93,7 +93,7 @@
               {/* Preview */}
               <div className="relative overflow-hidden flex-shrink-0 group-hover:bg-pearl transition-colors h-56 md:h-64">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative w-full h-full flex items-center justify-center bg-pearl2 p-6">
+                <div className="relative w-full h-full flex items-center justify-center bg-pearl2 dark:bg-slate-900 p-6">
                   {proyecto.estado === 'En mantenimiento' ? (
                     <div className="text-center px-4 py-6 rounded-3xl border border-dashed border-slate/40 bg-slate-50">
                       <p className="text-sm font-display font-bold uppercase text-amber-600 tracking-wide">
@@ -137,7 +137,7 @@
                 <div className="flex items-center justify-between flex-wrap gap-3 pt-4 border-t border-border">
                   <div className="flex flex-wrap gap-2">
                     {proyecto.tecnologias.map((tech, i) => (
-                      <div key={i} className="flex items-center justify-center bg-pearl2 border border-border rounded-lg w-9 h-9" title={tech.nombre}>
+                      <div key={i} className="flex items-center justify-center bg-pearl2 dark:bg-slate-900 border border-border rounded-lg w-9 h-9" title={tech.nombre}>
                         <img
                           src={tech.logo}
                           alt={tech.nombre}

@@ -218,26 +218,28 @@ a {
 /* Dark mode overrides */
 .dark body,
 .dark html {
-  background: #020617;
+  background: #07101d;
   color: #e2e8f0;
 }
 .dark .bg-white {
-  background-color: #0b1120 !important;
+  background-color: #111827 !important;
 }
 .dark .bg-white\/88 {
-  background-color: rgba(7, 11, 27, .88) !important;
+  background-color: rgba(15, 23, 42, .90) !important;
 }
-.dark .bg-pearl,
+.dark .bg-pearl {
+  background-color: #111827 !important;
+}
 .dark .bg-pearl2 {
-  background-color: #0b1120 !important;
+  background-color: #15203a !important;
 }
 .dark .bg-slate-100,
 .dark .bg-slate {
-  background-color: #111827 !important;
+  background-color: #1e293b !important;
 }
 .dark .bg-blue-dim,
 .dark .bg-blue-mid {
-  background-color: #102145 !important;
+  background-color: rgba(59, 110, 246, .14) !important;
 }
 .dark .text-ink,
 .dark .text-slate,
@@ -263,7 +265,7 @@ a {
   color: #eff6ff !important;
 }
 .dark .bg-blue\/10 {
-  background-color: rgba(59, 110, 246, .10) !important;
+  background-color: rgba(59, 110, 246, .12) !important;
 }
 .dark .bg-blue\/20 {
   background-color: rgba(59, 110, 246, .18) !important;
@@ -277,7 +279,7 @@ a {
 .dark .shadow-xs,
 .dark .shadow-sm,
 .dark .shadow-lg {
-  box-shadow: 0 0 0 1px rgba(96, 165, 250, .12), 0 24px 60px rgba(15, 23, 42, .35) !important;
+  box-shadow: 0 0 0 1px rgba(96, 165, 250, .12), 0 24px 60px rgba(15, 23, 42, .30) !important;
 }
 .dark .backdrop-blur-\[20px\] {
   background-color: rgba(7, 12, 29, .92) !important;
