@@ -4,7 +4,7 @@
   "description": "Proyecto web completamente reorganizado con **React (CDN)**, **Tailwind CSS (CDN)** y **componentes modulares**. Mismo diseño, código limpio y profesional.",
   "main": "index.js",
   "scripts": {
-    "build": "npx babel js/componentes --out-dir js/compiled/componentes --extensions \".js\" && npx babel js/app.js --out-file js/compiled/app.js --extensions \".js\"",
+    "build": "node ./node_modules/@babel/cli/bin/babel.js js/componentes --out-dir js/compiled/componentes --extensions \".js\" && node ./node_modules/@babel/cli/bin/babel.js js/app.js --out-file js/compiled/app.js --extensions \".js\"",
     "vercel-build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
