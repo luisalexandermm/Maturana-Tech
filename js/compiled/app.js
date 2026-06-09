@@ -9,4 +9,4 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(/*#__PURE__*/React.createElement(App, null));
 
 // Log de confirmación
-console.info('[Maturanna Innovate Tech] ✓ Aplicación React cargada correctamente');
+console.info('[Maturana Tech] ✓ Aplicación React cargada correctamente');

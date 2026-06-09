@@ -18,10 +18,14 @@ function Encabezado() {
     className: "flex items-center justify-between flex-wrap h-[68px] gap-4"
   }, /*#__PURE__*/React.createElement("a", {
     href: "#inicio",
-    className: "font-display text-lg font-black tracking-tight text-ink whitespace-nowrap flex-shrink-0"
-  }, "Maturanna ", /*#__PURE__*/React.createElement("span", {
+    className: "font-display text-lg font-black tracking-tight text-ink whitespace-nowrap flex-shrink-0 flex items-center gap-3"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "assets/logos/logo%20m.png",
+    alt: "Maturana Tech",
+    className: "w-8 h-8 object-contain"
+  }), /*#__PURE__*/React.createElement("span", null, "Maturana ", /*#__PURE__*/React.createElement("span", {
     className: "text-blue"
-  }, "Tech")), /*#__PURE__*/React.createElement("div", {
+  }, "Tech"))), /*#__PURE__*/React.createElement("div", {
     className: "hidden lg:flex items-center gap-8 ml-auto"
   }, /*#__PURE__*/React.createElement("a", {
     href: "#inicio",

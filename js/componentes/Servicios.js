@@ -1,29 +1,29 @@
 function Servicios() {
   const servicios = [
     {
-      icono: '🎨',
-      titulo: 'Diseño Web',
-      descripcion: 'Interfaces modernas, limpias y centradas en el usuario. Diseño responsive y con identidad visual clara.'
-    },
-    {
       icono: '💻',
-      titulo: 'Desarrollo Frontend',
-      descripcion: 'Sitios rápidos con HTML, CSS, JavaScript y React. Código limpio, organizado y fácil de mantener.'
+      titulo: 'Landing Page',
+      descripcion: 'Página enfocada en conversión. Diseño moderno y responsive. Ideal para captar clientes.'
     },
     {
-      icono: '⚙️',
-      titulo: 'Backend en Render',
-      descripcion: 'APIs REST con Node.js + Express, bases de datos en Firebase o MongoDB, desplegadas en Render.'
+      icono: '🎨',
+      titulo: 'Diseño Moderno UI',
+      descripcion: 'Interfaces limpias y profesionales con foco en experiencia de usuario y conversión.'
     },
     {
-      icono: '🚀',
-      titulo: 'Landing Pages',
-      descripcion: 'Páginas de aterrizaje optimizadas para conversión, con animaciones suaves y llamadas a la acción efectivas.'
+      icono: '🌐',
+      titulo: 'Sitio Web Completo',
+      descripcion: 'Estructura profesional para negocios. Varias secciones. Optimizado para rendimiento.'
     },
     {
-      icono: '🛠️',
-      titulo: 'Mantenimiento Web Básico',
-      descripcion: 'Soporte y mejoras frontend: actualizaciones, corrección de errores, optimización de rendimiento y ajustes visuales en tu sitio.'
+      icono: '🧩',
+      titulo: 'Backend (Render / Firebase)',
+      descripcion: 'Conexión a base de datos. Formularios funcionales. Integración completa.'
+    },
+    {
+      icono: '🛡️',
+      titulo: 'Mantenimiento Web',
+      descripcion: 'Actualizaciones. Corrección de errores. Soporte continuo.'
     }
   ];
 
@@ -37,11 +37,14 @@ function Servicios() {
             <span className="w-1.5 h-1.5 bg-blue rounded-full"></span>
             Servicios
           </div>
+          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-blue mb-3">
+            Planes desde $XXX COP
+          </div>
           <h2 className="font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4">
-            ¿En qué puedo<br />ayudarte?
+            Servicios diseñados para convertir visitantes en clientes.
           </h2>
           <p className="text-lg text-slate max-w-2xl font-body">
-            Soluciones completas desde la idea hasta el servidor. Cada entregable listo para producción.
+            Ofrezco soluciones claras y efectivas para que tu negocio tenga presencia profesional en internet.
           </p>
         </div>
 

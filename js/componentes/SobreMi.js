@@ -1,5 +1,17 @@
 function SobreMi() {
-  const habilidades = ['React', 'Node.js', 'Firebase', 'Tailwind CSS', 'Express', 'JavaScript', 'HTML / CSS', 'Git'];
+  const habilidades = [
+    { nombre: 'React', logo: 'assets/logos/react.png' },
+    { nombre: 'Node.js', logo: 'assets/logos/nodejs.png' },
+    { nombre: 'Firebase', logo: 'assets/logos/firebase.png' },
+    { nombre: 'Tailwind CSS', logo: 'assets/logos/tailwindcss.png' },
+    { nombre: 'Express', logo: 'assets/logos/express.png' },
+    { nombre: 'JavaScript', logo: 'assets/logos/javascript.png' },
+    { nombre: 'HTML / CSS', logo: 'assets/logos/html5.png' },
+    { nombre: 'GitHub', logo: 'assets/logos/github.png' },
+    { nombre: 'Figma', logo: 'assets/logos/figma.png' },
+    { nombre: 'Render', logo: 'assets/logos/render.png' },
+    { nombre: 'Vercel', logo: 'assets/logos/vercel.png' },
+  ];
 
   return (
     <section id="sobre-mi" className="py-24 lg:py-32 bg-transparent">
@@ -78,21 +90,27 @@ function SobreMi() {
             </h2>
 
             <p className="text-lg text-slate leading-relaxed mb-4 font-body">
-              Estudiante de Ingeniería en Sistemas y desarrollador web autodidacta enfocado en construir soluciones modernas y funcionales. Creo desde Quibdó, Chocó — Colombia.
+              Soy desarrollador web dedicado a crear páginas que transmiten confianza y convierten visitantes en clientes. Trabajo con negocios y emprendimientos para lanzar una presencia digital profesional.
             </p>
 
             <p className="text-lg text-slate leading-relaxed mb-8 font-body">
-              Me apasiona combinar diseño elegante con código sólido. Cada proyecto que entrego está pensado para ser escalable, accesible y listo para producción real.
+              Cada proyecto se construye con diseño claro, velocidad real y un enfoque práctico en resultados que generen contactos y ventas.
             </p>
 
-            {/* Skills */}
             <div className="flex flex-wrap gap-2 mb-8">
               {habilidades.map((skill, idx) => (
                 <span 
                   key={idx}
-                  className="bg-blue-dim text-blue border border-blue-mid px-3 py-1.5 rounded-lg text-xs font-display font-bold tracking-wide hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+                  className="bg-blue-dim text-blue border border-blue-mid px-3 py-1.5 rounded-lg text-xs font-display font-bold tracking-wide hover:-translate-y-0.5 transition-all duration-200 cursor-default flex items-center gap-2"
                 >
-                  {skill}
+                  {skill.logo && (
+                    <img
+                      src={skill.logo}
+                      alt={skill.nombre}
+                      className="w-4 h-4 object-contain"
+                    />
+                  )}
+                  {skill.nombre}
                 </span>
               ))}
             </div>
@@ -102,19 +120,10 @@ function SobreMi() {
                 Trabajemos juntos
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              
-              <button 
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = 'assets/catalogo.pdf';
-                  link.download = 'catalogo.pdf';
-                  link.click();
-                }}
-                className="inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-7 py-3 rounded-lg font-display font-semibold text-sm hover:bg-blue hover:text-white hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300"
-              >
-                Ver catálogo
-                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              </button>
+              <a href="assets/catalogo.pdf" download className="inline-flex items-center gap-2 bg-slate text-slate9 px-7 py-3 rounded-lg font-display font-semibold text-sm hover:bg-slate-700 transition-all duration-300">
+                Descargar catálogo
+                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 18h16"/></svg>
+              </a>
             </div>
           </div>
 

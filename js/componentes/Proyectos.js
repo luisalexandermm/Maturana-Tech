@@ -1,49 +1,65 @@
-function Proyectos() {
+﻿function Proyectos() {
   const proyectos = [
     {
       nombre: 'Vías del Chocó',
-      descripcion: 'Plataforma colaborativa para reportar y consultar el estado de las vías en tiempo real. Los usuarios pueden registrar incidentes en el mapa, ver alertas activas y seguir el historial.',
+      descripcion: 'Plataforma colaborativa con información de vías en vivo. Ideal para mostrar resultados reales y confiables en línea.',
       imagen: 'assets/logos/viaschoco.png',
       link: 'https://luisalexandermm.github.io/viaschoco/',
       tag: '⭐ Destacado',
-      tecnologias: ['React', 'Firebase', 'Node.js', 'Leaflet', 'Vercel'],
+      tecnologias: [
+        { nombre: 'React', logo: 'assets/logos/react.png' },
+        { nombre: 'Firebase', logo: 'assets/logos/firebase.png' },
+        { nombre: 'Node.js', logo: 'assets/logos/nodejs.png' },
+        { nombre: 'Vercel', logo: 'assets/logos/vercel.png' }
+      ],
       destacado: true,
       estado: 'En vivo'
     },
     {
       nombre: 'StyleZone',
-      descripcion: 'Tienda de accesorios tech con catálogo multi-página (audífonos, teclados, smartwatches). CSS personalizado y lógica de carrito en JavaScript vanilla.',
+      descripcion: 'Landing de tienda online con diseño claro, navegación simple y enfoque en mostrar productos con estilo.',
       imagen: 'assets/logos/stylezone.png',
       link: '#',
       tag: '🛍️ E-commerce',
-      tecnologias: ['HTML', 'CSS', 'JavaScript'],
+      tecnologias: [
+        { nombre: 'HTML', logo: 'assets/logos/html5.png' },
+        { nombre: 'CSS', logo: 'assets/logos/css.png' },
+        { nombre: 'JavaScript', logo: 'assets/logos/javascript.png' }
+      ],
       estado: 'En mantenimiento'
     },
+   
     {
       nombre: 'EcoPacific',
-      descripcion: 'Web de conciencia ambiental para la región del Pacífico colombiano. Estructura multi-página con navegación interna, galería y contenido informativo.',
+      descripcion: 'Sitio informativo para proyectos ambientales, con estructura profesional y contenido fácil de explorar.',
       imagen: 'assets/logos/ecopacific.png',
       link: '#',
-      tag: '🌿 Ambiental',
-      tecnologias: ['HTML', 'CSS'],
+      tag: '🌿 Inspiración',
+      tecnologias: [
+        { nombre: 'HTML', logo: 'assets/logos/html5.png' },
+        { nombre: 'CSS', logo: 'assets/logos/css.png' }
+      ],
       estado: 'En mantenimiento'
     },
     {
       nombre: 'AgroMarket',
-      descripcion: 'Plataforma de mercado agrícola local. Conecta a productores campesinos con consumidores a través de una interfaz limpia y accesible.',
+      descripcion: 'Plataforma de comercio electrónico para productos agrícolas con enfoque en conectar productores y consumidores.',
       imagen: 'assets/logos/agromarket.png',
       link: '#',
-      tag: '🌾 Marketplace',
-      tecnologias: ['HTML', 'CSS'],
+      tag: '🌾 Agricultura',
+      tecnologias: [
+        { nombre: 'React', logo: 'assets/logos/react.png' },
+        { nombre: 'Node.js', logo: 'assets/logos/nodejs.png' },
+        { nombre: 'MongoDB', logo: 'assets/logos/mongodb.png' }
+      ],
       estado: 'En mantenimiento'
-    },
-   
+    }
   ];
 
   const handleMantenimiento = (e, estado) => {
     if (estado === 'En mantenimiento') {
       e.preventDefault();
-      alert('En mantenimiento');
+      alert('Este proyecto está en mantenimiento. Estoy trabajando para que vuelva pronto.');
     }
   };
 
@@ -55,13 +71,13 @@ function Proyectos() {
         <div className="mb-14 opacity-0 animate-fadeUp">
           <div className="inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4">
             <span className="w-1.5 h-1.5 bg-blue rounded-full"></span>
-            Proyectos en vivo
+            Proyectos en vivo y en mantenimiento
           </div>
           <h2 className="font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4">
-            Resultados reales,<br />no solo código.
+            Proyectos funcionales y en mantenimiento que generan confianza.
           </h2>
           <p className="text-lg text-slate max-w-2xl font-body">
-            Cada proyecto está desplegado y disponible. Haz clic en "Ver sitio" para verlo en acción.
+            Muestras de trabajo pensadas para que tus clientes vean resultados reales y fáciles de usar.
           </p>
         </div>
 
@@ -123,11 +139,15 @@ function Proyectos() {
 
                 {/* Footer */}
                 <div className="flex items-center justify-between flex-wrap gap-3 pt-4 border-t border-border">
-                  <div className="flex flex-wrap gap-1.5">
+                  <div className="flex flex-wrap gap-2">
                     {proyecto.tecnologias.map((tech, i) => (
-                      <span key={i} className="bg-pearl2 text-slate border border-border rounded px-2.5 py-1 text-xs font-display font-bold tracking-wider">
-                        {tech}
-                      </span>
+                      <div key={i} className="flex items-center justify-center bg-pearl2 border border-border rounded-lg w-9 h-9" title={tech.nombre}>
+                        <img
+                          src={tech.logo}
+                          alt={tech.nombre}
+                          className="w-5 h-5 object-contain"
+                        />
+                      </div>
                     ))}
                   </div>
                   <a 
@@ -137,7 +157,7 @@ function Proyectos() {
                     rel={proyecto.estado === 'En mantenimiento' ? undefined : 'noopener noreferrer'}
                     className={`inline-flex items-center gap-2 ${proyecto.estado === 'En mantenimiento' ? 'bg-slate text-slate6 cursor-not-allowed' : 'bg-blue text-white hover:shadow-blue hover:-translate-y-0.5'} px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all duration-300 whitespace-nowrap`}
                   >
-                    {proyecto.estado === 'En mantenimiento' ? 'En mantenimiento' : 'Ver sitio'}
+                    {proyecto.estado === 'En mantenimiento' ? 'En mantenimiento' : 'Ver proyecto'}
                     {proyecto.estado !== 'En mantenimiento' && (
                       <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                     )}
@@ -156,3 +176,5 @@ function Proyectos() {
     </section>
   );
 }
+
+

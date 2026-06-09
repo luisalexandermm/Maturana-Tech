@@ -37,37 +37,35 @@ function Hero() {
             </div>
 
             <h1 className="font-display font-black text-5xl lg:text-7xl leading-tight text-ink tracking-tight -mb-2 animate-fadeUp" style={{ animationDelay: '0.1s' }}>
-              Diseño y desarrollo
+              Diseño páginas web profesionales
               <br />
-              web <em className="font-display not-italic bg-gradient-to-r from-blue to-blue/75 bg-clip-text text-transparent">moderno</em>
-              <br />
-              para negocios.
+              que ayudan a conseguir clientes
             </h1>
 
             <p className="text-lg text-slate leading-relaxed max-w-md font-body animate-fadeUp" style={{ animationDelay: '0.22s' }}>
-              Construyo experiencias digitales que combinan diseño elegante con código sólido. Resultados reales, listos para producción.
+              Desarrollo soluciones digitales modernas, rápidas y funcionales para negocios y emprendimientos.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-2 animate-fadeUp" style={{ animationDelay: '0.36s' }}>
-              <a href="#proyectos" className="inline-flex items-center gap-2 bg-blue text-white px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300">
-                Ver proyectos
+              <a href="#contacto" className="inline-flex items-center gap-2 bg-blue text-white px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300">
+                Cotizar proyecto
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              <a href="#contacto" className="inline-flex items-center gap-2 bg-transparent text-ink border-2 border-border2 px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:border-blue hover:text-blue hover:-translate-y-0.5 transition-all duration-300">
-                Contactar
+              <a href="#proyectos" className="inline-flex items-center gap-2 bg-transparent text-ink border-2 border-border2 px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:border-blue hover:text-blue hover:-translate-y-0.5 transition-all duration-300">
+                Ver proyectos
               </a>
             </div>
 
             <div className="flex items-center gap-3 pt-8 animate-fadeUp" style={{ animationDelay: '0.5s' }}>
               <div className="flex -space-x-1">
-                <span className="w-7 h-7 rounded-full bg-pearl2 border-2 border-white flex items-center justify-center text-sm">🎨</span>
-                <span className="w-7 h-7 rounded-full bg-pearl2 border-2 border-white flex items-center justify-center text-sm">⚡</span>
+                <span className="w-7 h-7 rounded-full bg-pearl2 border-2 border-white flex items-center justify-center text-sm">🎯</span>
+                <span className="w-7 h-7 rounded-full bg-pearl2 border-2 border-white flex items-center justify-center text-sm">✨</span>
                 <span className="w-7 h-7 rounded-full bg-pearl2 border-2 border-white flex items-center justify-center text-sm">🚀</span>
               </div>
               <p className="text-xs font-body text-slate2">
-                <strong className="text-slate">Diseño · Código · Resultados</strong>
+                <strong className="text-slate">Diseño · Resultados · Impacto</strong>
                 <br />
-                Proyectos reales en producción
+                Sitios que atraen clientes.
               </p>
             </div>
           </div>

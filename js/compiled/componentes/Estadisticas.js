@@ -1,40 +1,40 @@
 "use strict";
 
 function Estadisticas() {
-  const stats = [{
-    numero: '5',
-    sufijo: '+',
-    etiqueta: 'Proyectos completados'
+  const beneficios = [{
+    titulo: 'Mayor presencia digital',
+    descripcion: 'Tu negocio se ve profesional y accesible desde cualquier dispositivo.'
   }, {
-    numero: '100',
-    sufijo: '%',
-    etiqueta: 'Responsive design'
+    titulo: 'Imagen profesional',
+    descripcion: 'Una web elegante que transmite confianza a tus clientes.'
   }, {
-    numero: '1',
-    sufijo: '+',
-    etiqueta: 'Años de experiencia'
+    titulo: 'Captación de clientes',
+    descripcion: 'Llamadas a la acción claras que invitan a cotizar o comprar.'
   }, {
-    numero: '6',
-    sufijo: '+',
-    etiqueta: 'Tecnologías dominadas'
+    titulo: 'Sitio rápido y funcional',
+    descripcion: 'Experiencias fluidas que mantienen a los visitantes en tu sitio.'
   }];
   return /*#__PURE__*/React.createElement("div", {
-    className: "border-t border-b border-border bg-pearl py-8 lg:py-8"
+    className: "border-t border-b border-border bg-pearl py-16 lg:py-20"
   }, /*#__PURE__*/React.createElement("div", {
     className: "max-w-6xl mx-auto px-7"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-wrap justify-around items-center gap-6 lg:gap-0"
-  }, stats.map((stat, idx) => /*#__PURE__*/React.createElement("div", {
+    className: "text-center mb-10"
+  }, /*#__PURE__*/React.createElement("h2", {
+    className: "font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4"
+  }, "¿Qué obtienes con tu página web?"), /*#__PURE__*/React.createElement("p", {
+    className: "text-lg text-slate max-w-2xl mx-auto font-body"
+  }, "Beneficios claros para que tu negocio gane visibilidad, confianza y clientes.")), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-1 sm:grid-cols-2 gap-4"
+  }, beneficios.map((item, idx) => /*#__PURE__*/React.createElement("div", {
     key: idx,
-    className: "text-center opacity-0 animate-fadeUp",
+    className: "bg-white border border-border rounded-3xl p-7 shadow-xs hover:shadow-md transition-all duration-300 opacity-0 animate-fadeUp",
     style: {
-      animationDelay: `${idx * 0.08}s`
+      animationDelay: `${idx * 0.1}s`
     }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "font-display text-4xl lg:text-5xl font-black tracking-tighter text-ink"
-  }, stat.numero, /*#__PURE__*/React.createElement("span", {
-    className: "text-blue"
-  }, stat.sufijo)), /*#__PURE__*/React.createElement("div", {
-    className: "text-xs lg:text-sm text-slate2 font-body mt-1"
-  }, stat.etiqueta))))));
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "font-display font-bold text-xl text-ink mb-3"
+  }, item.titulo), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-slate leading-relaxed"
+  }, item.descripcion))))));
 }

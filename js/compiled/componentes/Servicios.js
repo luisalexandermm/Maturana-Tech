@@ -2,25 +2,25 @@
 
 function Servicios() {
   const servicios = [{
-    icono: '🎨',
-    titulo: 'Diseño Web',
-    descripcion: 'Interfaces modernas, limpias y centradas en el usuario. Diseño responsive y con identidad visual clara.'
-  }, {
     icono: '💻',
-    titulo: 'Desarrollo Frontend',
-    descripcion: 'Sitios rápidos con HTML, CSS, JavaScript y React. Código limpio, organizado y fácil de mantener.'
+    titulo: 'Landing Page',
+    descripcion: 'Página enfocada en conversión. Diseño moderno y responsive. Ideal para captar clientes.'
   }, {
-    icono: '⚙️',
-    titulo: 'Backend en Render',
-    descripcion: 'APIs REST con Node.js + Express, bases de datos en Firebase o MongoDB, desplegadas en Render.'
+    icono: '🎨',
+    titulo: 'Diseño Moderno UI',
+    descripcion: 'Interfaces limpias y profesionales con foco en experiencia de usuario y conversión.'
   }, {
-    icono: '🚀',
-    titulo: 'Landing Pages',
-    descripcion: 'Páginas de aterrizaje optimizadas para conversión, con animaciones suaves y llamadas a la acción efectivas.'
+    icono: '🌐',
+    titulo: 'Sitio Web Completo',
+    descripcion: 'Estructura profesional para negocios. Varias secciones. Optimizado para rendimiento.'
   }, {
-    icono: '🛠️',
-    titulo: 'Mantenimiento Web Básico',
-    descripcion: 'Soporte y mejoras frontend: actualizaciones, corrección de errores, optimización de rendimiento y ajustes visuales en tu sitio.'
+    icono: '🧩',
+    titulo: 'Backend (Render / Firebase)',
+    descripcion: 'Conexión a base de datos. Formularios funcionales. Integración completa.'
+  }, {
+    icono: '🛡️',
+    titulo: 'Mantenimiento Web',
+    descripcion: 'Actualizaciones. Corrección de errores. Soporte continuo.'
   }];
   return /*#__PURE__*/React.createElement("section", {
     id: "servicios",
@@ -33,11 +33,13 @@ function Servicios() {
     className: "inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4"
   }, /*#__PURE__*/React.createElement("span", {
     className: "w-1.5 h-1.5 bg-blue rounded-full"
-  }), "Servicios"), /*#__PURE__*/React.createElement("h2", {
+  }), "Servicios"), /*#__PURE__*/React.createElement("div", {
+    className: "text-xs font-semibold uppercase tracking-[0.3em] text-blue mb-3"
+  }, "Planes desde $XXX COP"), /*#__PURE__*/React.createElement("h2", {
     className: "font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4"
-  }, "\xBFEn qu\xE9 puedo", /*#__PURE__*/React.createElement("br", null), "ayudarte?"), /*#__PURE__*/React.createElement("p", {
+  }, "Servicios diseñados para convertir visitantes en clientes."), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate max-w-2xl font-body"
-  }, "Soluciones completas desde la idea hasta el servidor. Cada entregable listo para producci\xF3n.")), /*#__PURE__*/React.createElement("div", {
+  }, "Ofrezco soluciones claras y efectivas para que tu negocio tenga presencia profesional en internet.")), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5"
   }, servicios.map((servicio, idx) => /*#__PURE__*/React.createElement("div", {
     key: idx,

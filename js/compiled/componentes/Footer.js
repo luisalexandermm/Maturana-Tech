@@ -25,7 +25,7 @@ function Footer() {
     link: 'https://wa.me/573145312045'
   }, {
     icono: 'email',
-    link: 'mailto:AlrxanderMaturana76@gmail.com'
+    link: 'mailto:contacto.maturanainnovate@gmail.com'
   }];
   return /*#__PURE__*/React.createElement("footer", {
     className: "bg-ink py-16 lg:py-12"
@@ -49,7 +49,7 @@ function Footer() {
     className: "flex flex-col lg:flex-row items-center justify-between gap-4"
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-xs text-white/25"
-  }, "\xA9 2025 Maturanna Innovate Tech. Todos los derechos reservados."), /*#__PURE__*/React.createElement("div", {
+  }, "\xA9 2025 Maturana Tech. Todos los derechos reservados."), /*#__PURE__*/React.createElement("div", {
     className: "flex gap-4"
   }, redes.map((red, idx) => {
     const iconSvg = {

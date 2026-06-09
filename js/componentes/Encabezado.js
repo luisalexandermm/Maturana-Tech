@@ -19,8 +19,9 @@ function Encabezado() {
       <div className="max-w-6xl mx-auto px-7">
           <nav className="flex items-center justify-between flex-wrap h-[68px] gap-4">
           {/* Logo */}
-          <a href="#inicio" className="font-display text-lg font-black tracking-tight text-ink whitespace-nowrap flex-shrink-0">
-            Maturanna <span className="text-blue">Tech</span>
+          <a href="#inicio" className="font-display text-lg font-black tracking-tight text-ink whitespace-nowrap flex-shrink-0 flex items-center gap-3">
+            <img src="assets/logos/logo%20m.png" alt="Maturana Tech" className="w-8 h-8 object-contain" />
+            <span>Maturana <span className="text-blue">Tech</span></span>
           </a>
 
           {/* Nav links (desktop) */}

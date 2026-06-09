@@ -10,7 +10,7 @@ function Footer() {
   const redes = [
     { icono: 'github', link: 'https://github.com/luisalexandermm' },
     { icono: 'whatsapp', link: 'https://wa.me/573145312045' },
-    { icono: 'email', link: 'mailto:AlrxanderMaturana76@gmail.com' }
+    { icono: 'email', link: 'mailto:contacto.maturanainnovate@gmail.com' }
   ];
 
   return (
@@ -47,7 +47,7 @@ function Footer() {
         {/* Footer Bottom */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/25">
-            © 2025 Maturanna Innovate Tech. Todos los derechos reservados.
+            © 2025 Maturana Tech. Todos los derechos reservados.
           </p>
           
           <div className="flex gap-4">

@@ -1,7 +1,7 @@
 "use strict";
 
 function SobreMi() {
-  const habilidades = ['React', 'Node.js', 'Firebase', 'Tailwind CSS', 'Express', 'JavaScript', 'HTML / CSS', 'Git'];
+  const habilidades = [{ nombre: 'React', logo: 'assets/logos/react.png' }, { nombre: 'Node.js', logo: 'assets/logos/nodejs.png' }, { nombre: 'Firebase', logo: 'assets/logos/firebase.png' }, { nombre: 'Tailwind CSS', logo: 'assets/logos/tailwindcss.png' }, { nombre: 'Express', logo: 'assets/logos/express.png' }, { nombre: 'JavaScript', logo: 'assets/logos/javascript.png' }, { nombre: 'HTML / CSS', logo: 'assets/logos/html5.png' }, { nombre: 'GitHub', logo: 'assets/logos/github.png' }, { nombre: 'Figma', logo: 'assets/logos/figma.png' }, { nombre: 'Render', logo: 'assets/logos/render.png' }, { nombre: 'Vercel', logo: 'assets/logos/vercel.png' }];
   return /*#__PURE__*/React.createElement("section", {
     id: "sobre-mi",
     className: "py-24 lg:py-32 bg-transparent"
@@ -99,14 +99,18 @@ function SobreMi() {
     className: "text-blue"
   }, "Luis Alexander.")), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate leading-relaxed mb-4 font-body"
-  }, "Estudiante de Ingenier\xEDa en Sistemas y desarrollador web autodidacta enfocado en construir soluciones modernas y funcionales. Creo desde Quibd\xF3, Choc\xF3 \u2014 Colombia."), /*#__PURE__*/React.createElement("p", {
+  }, "Soy desarrollador web dedicado a crear páginas que transmiten confianza y convierten visitantes en clientes. Trabajo con negocios y emprendimientos para lanzar una presencia digital profesional."), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate leading-relaxed mb-8 font-body"
-  }, "Me apasiona combinar dise\xF1o elegante con c\xF3digo s\xF3lido. Cada proyecto que entrego est\xE1 pensado para ser escalable, accesible y listo para producci\xF3n real."), /*#__PURE__*/React.createElement("div", {
+  }, "Cada proyecto se construye con diseño claro, velocidad real y un enfoque práctico en resultados que generen contactos y ventas."), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-wrap gap-2 mb-8"
   }, habilidades.map((skill, idx) => /*#__PURE__*/React.createElement("span", {
     key: idx,
-    className: "bg-blue-dim text-blue border border-blue-mid px-3 py-1.5 rounded-lg text-xs font-display font-bold tracking-wide hover:-translate-y-0.5 transition-all duration-200 cursor-default"
-  }, skill))), /*#__PURE__*/React.createElement("div", {
+    className: "bg-blue-dim text-blue border border-blue-mid px-3 py-1.5 rounded-lg text-xs font-display font-bold tracking-wide hover:-translate-y-0.5 transition-all duration-200 cursor-default flex items-center gap-2"
+  }, skill.logo && /*#__PURE__*/React.createElement("img", {
+    src: skill.logo,
+    alt: skill.nombre,
+    className: "w-4 h-4 object-contain"
+  }), skill.nombre))), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-wrap gap-4"
   }, /*#__PURE__*/React.createElement("a", {
     href: "#contacto",
@@ -119,16 +123,11 @@ function SobreMi() {
     strokeWidth: "2.5",
     viewBox: "0 0 24 24"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M5 12h14M12 5l7 7-7 7"
-  }))), /*#__PURE__*/React.createElement("button", {
-    onClick: () => {
-      const link = document.createElement('a');
-      link.href = 'assets/catalogo.pdf';
-      link.download = 'catalogo.pdf';
-      link.click();
-    },
-    className: "inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-7 py-3 rounded-lg font-display font-semibold text-sm hover:bg-blue hover:text-white hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300"
-  }, "Ver cat\xE1logo", /*#__PURE__*/React.createElement("svg", {
+    d: "M5 12h14M12 5l7 7-7 7"  }))), /*#__PURE__*/React.createElement("a", {
+    href: "assets/catalogo.pdf",
+    download: true,
+    className: "inline-flex items-center gap-2 bg-slate text-slate9 px-7 py-3 rounded-lg font-display font-semibold text-sm hover:bg-slate-700 transition-all duration-300"
+  }, "Descargar catálogo", /*#__PURE__*/React.createElement("svg", {
     width: "16",
     height: "16",
     fill: "none",
@@ -136,6 +135,5 @@ function SobreMi() {
     strokeWidth: "2.5",
     viewBox: "0 0 24 24"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"
-  }))))))));
+    d: "M12 3v12M8 11l4 4 4-4M4 18h16"  }))))))));
 }

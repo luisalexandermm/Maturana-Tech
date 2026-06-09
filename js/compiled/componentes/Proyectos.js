@@ -3,42 +3,42 @@
 function Proyectos() {
   const proyectos = [{
     nombre: 'Vías del Chocó',
-    descripcion: 'Plataforma colaborativa para reportar y consultar el estado de las vías en tiempo real. Los usuarios pueden registrar incidentes en el mapa, ver alertas activas y seguir el historial.',
+    descripcion: 'Plataforma colaborativa con información de vías en vivo. Ideal para mostrar resultados reales y confiables en línea.',
     imagen: 'assets/logos/viaschoco.png',
     link: 'https://luisalexandermm.github.io/viaschoco/',
     tag: '⭐ Destacado',
-    tecnologias: ['React', 'Firebase', 'Node.js', 'Leaflet', 'Vercel'],
+    tecnologias: [{ nombre: 'React', logo: 'assets/logos/react.png' }, { nombre: 'Firebase', logo: 'assets/logos/firebase.png' }, { nombre: 'Node.js', logo: 'assets/logos/nodejs.png' }, { nombre: 'Leaflet', logo: 'assets/logos/leaflet.svg' }, { nombre: 'Vercel', logo: 'assets/logos/vercel.png' }],
     destacado: true,
     estado: 'En vivo'
   }, {
     nombre: 'StyleZone',
-    descripcion: 'Tienda de accesorios tech con catálogo multi-página (audífonos, teclados, smartwatches). CSS personalizado y lógica de carrito en JavaScript vanilla.',
+    descripcion: 'Landing de tienda online con diseño claro, navegación simple y enfoque en mostrar productos con estilo.',
     imagen: 'assets/logos/stylezone.png',
     link: '#',
     tag: '🛍️ E-commerce',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
+    tecnologias: [{ nombre: 'HTML', logo: 'assets/logos/html5.png' }, { nombre: 'CSS', logo: 'assets/logos/css.png' }, { nombre: 'JavaScript', logo: 'assets/logos/javascript.png' }],
     estado: 'En mantenimiento'
   }, {
     nombre: 'EcoPacific',
-    descripcion: 'Web de conciencia ambiental para la región del Pacífico colombiano. Estructura multi-página con navegación interna, galería y contenido informativo.',
+    descripcion: 'Sitio informativo para proyectos ambientales, con estructura profesional y contenido fácil de explorar.',
     imagen: 'assets/logos/ecopacific.png',
     link: '#',
-    tag: '🌿 Ambiental',
-    tecnologias: ['HTML', 'CSS'],
+    tag: '🌿 Inspiración',
+    tecnologias: [{ nombre: 'HTML', logo: 'assets/logos/html5.png' }, { nombre: 'CSS', logo: 'assets/logos/css.png' }],
     estado: 'En mantenimiento'
   }, {
     nombre: 'AgroMarket',
-    descripcion: 'Plataforma de mercado agrícola local. Conecta a productores campesinos con consumidores a través de una interfaz limpia y accesible.',
+    descripcion: 'Plataforma de comercio electrónico para productos agrícolas con enfoque en conectar productores y consumidores.',
     imagen: 'assets/logos/agromarket.png',
     link: '#',
-    tag: '🌾 Marketplace',
-    tecnologias: ['HTML', 'CSS'],
+    tag: '🌾 Agricultura',
+    tecnologias: [{ nombre: 'React', logo: 'assets/logos/react.png' }, { nombre: 'Node.js', logo: 'assets/logos/nodejs.png' }, { nombre: 'MongoDB', logo: 'assets/logos/mongodb.png' }],
     estado: 'En mantenimiento'
   }];
   const handleMantenimiento = (e, estado) => {
     if (estado === 'En mantenimiento') {
       e.preventDefault();
-      alert('En mantenimiento');
+      alert('Este proyecto está en mantenimiento. Estoy trabajando para que vuelva pronto.');
     }
   };
   return /*#__PURE__*/React.createElement("section", {
@@ -52,11 +52,11 @@ function Proyectos() {
     className: "inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4"
   }, /*#__PURE__*/React.createElement("span", {
     className: "w-1.5 h-1.5 bg-blue rounded-full"
-  }), "Proyectos en vivo"), /*#__PURE__*/React.createElement("h2", {
+  }), "Proyectos en vivo y en mantenimiento"), /*#__PURE__*/React.createElement("h2", {
     className: "font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4"
-  }, "Resultados reales,", /*#__PURE__*/React.createElement("br", null), "no solo c\xF3digo."), /*#__PURE__*/React.createElement("p", {
+  }, "Proyectos funcionales y en mantenimiento que generan confianza."), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate max-w-2xl font-body"
-  }, "Cada proyecto est\xE1 desplegado y disponible. Haz clic en \"Ver sitio\" para verlo en acci\xF3n.")), /*#__PURE__*/React.createElement("div", {
+  }, "Muestras de trabajo pensadas para que tus clientes vean resultados reales y fáciles de usar.")), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-1 lg:grid-cols-3 gap-6"
   }, proyectos.map((proyecto, idx) => /*#__PURE__*/React.createElement("div", {
     key: idx,
@@ -80,7 +80,7 @@ function Proyectos() {
     className: "text-sm font-display font-bold uppercase text-amber-600 tracking-wide"
   }, "En mantenimiento"), /*#__PURE__*/React.createElement("p", {
     className: "text-xs text-slate mt-2"
-  }, "Esta secci\xF3n est\xE1 en mantenimiento.")) : /*#__PURE__*/React.createElement("img", {
+  }, "Este proyecto está en mantenimiento.")) : /*#__PURE__*/React.createElement("img", {
     src: proyecto.imagen,
     alt: `${proyecto.nombre} logo`,
     className: "max-w-full max-h-full object-contain"
@@ -101,17 +101,22 @@ function Proyectos() {
   }, proyecto.descripcion), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-between flex-wrap gap-3 pt-4 border-t border-border"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-wrap gap-1.5"
-  }, proyecto.tecnologias.map((tech, i) => /*#__PURE__*/React.createElement("span", {
+    className: "flex flex-wrap gap-2"
+  }, proyecto.tecnologias.map((tech, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
-    className: "bg-pearl2 text-slate border border-border rounded px-2.5 py-1 text-xs font-display font-bold tracking-wider"
-  }, tech))), /*#__PURE__*/React.createElement("a", {
+    className: "flex items-center justify-center bg-pearl2 border border-border rounded-lg w-9 h-9",
+    title: tech.nombre
+  }, /*#__PURE__*/React.createElement("img", {
+    src: tech.logo,
+    alt: tech.nombre,
+    className: "w-5 h-5 object-contain"
+  })))), /*#__PURE__*/React.createElement("a", {
     href: proyecto.link,
     onClick: e => handleMantenimiento(e, proyecto.estado),
     target: proyecto.estado === 'En mantenimiento' ? '_self' : '_blank',
     rel: proyecto.estado === 'En mantenimiento' ? undefined : 'noopener noreferrer',
     className: `inline-flex items-center gap-2 ${proyecto.estado === 'En mantenimiento' ? 'bg-slate text-slate6 cursor-not-allowed' : 'bg-blue text-white hover:shadow-blue hover:-translate-y-0.5'} px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all duration-300 whitespace-nowrap`
-  }, proyecto.estado === 'En mantenimiento' ? 'En mantenimiento' : 'Ver sitio', proyecto.estado !== 'En mantenimiento' && /*#__PURE__*/React.createElement("svg", {
+  }, proyecto.estado === 'En mantenimiento' ? 'En mantenimiento' : 'Ver proyecto', proyecto.estado !== 'En mantenimiento' && /*#__PURE__*/React.createElement("svg", {
     width: "13",
     height: "13",
     fill: "none",
