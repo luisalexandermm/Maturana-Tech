@@ -4,48 +4,40 @@ function Proyectos() {
       nombre: 'Vías del Chocó',
       descripcion: 'Plataforma colaborativa para reportar y consultar el estado de las vías en tiempo real. Los usuarios pueden registrar incidentes en el mapa, ver alertas activas y seguir el historial.',
       imagen: 'assets/logos/viaschoco.png',
-      link: 'https://viaschoco.vercel.app/',
+      link: 'https://luisalexandermm.github.io/viaschoco/',
       tag: '⭐ Destacado',
       tecnologias: ['React', 'Firebase', 'Node.js', 'Leaflet', 'Vercel'],
       destacado: true,
       estado: 'En vivo'
     },
     {
-      nombre: 'StyleZone by Luisito',
+      nombre: 'StyleZone ',
       descripcion: 'Tienda de accesorios tech con catálogo multi-página (audífonos, teclados, smartwatches). CSS personalizado y lógica de carrito en JavaScript vanilla.',
       imagen: 'assets/logos/stylezone.png',
-      link: '',
+      link: 'https://luisalexandermm.github.io/stylezone-byluisito-/',
       tag: '🛍️ E-commerce',
       tecnologias: ['HTML', 'CSS', 'JavaScript'],
-      estado: 'En vivo'
+      estado: 'En mantenimiento'
     },
     {
       nombre: 'EcoPacific',
       descripcion: 'Web de conciencia ambiental para la región del Pacífico colombiano. Estructura multi-página con navegación interna, galería y contenido informativo.',
       imagen: 'assets/logos/ecopacific.png',
-      link: '',
+      link: 'https://luisalexandermm.github.io/ecopacific/',
       tag: '🌿 Ambiental',
       tecnologias: ['HTML', 'CSS'],
-      estado: 'En vivo'
+      estado: 'En mantenimiento'
     },
     {
       nombre: 'AgroMarket',
       descripcion: 'Plataforma de mercado agrícola local. Conecta a productores campesinos con consumidores a través de una interfaz limpia y accesible.',
       imagen: 'assets/logos/agromarket.png',
-      link: 'https://agromarket.netlify.app',
+      link: 'https://luisalexandermm.github.io/agromarket/',
       tag: '🌾 Marketplace',
       tecnologias: ['HTML', 'CSS'],
-      estado: 'En vivo'
+      estado: 'En mantenimiento'
     },
-    {
-      nombre: 'StyleZone',
-      descripcion: 'Versión original de StyleZone. Exploración de diseño visual con CSS puro — tipografía, paletas y layout totalmente personalizados.',
-      imagen: 'assets/logos/stylezone-original.png',
-      link: 'https://stylezone.netlify.app',
-      tag: '🎨 CSS Design',
-      tecnologias: ['HTML', 'CSS'],
-      estado: 'En vivo'
-    }
+   
   ];
 
   return (
@@ -101,8 +93,8 @@ function Proyectos() {
                   <h3 className="font-display font-black text-lg lg:text-xl text-ink tracking-tight">
                     {proyecto.nombre}
                   </h3>
-                  <div className="flex items-center gap-1 text-xs font-display font-semibold text-green-600">
-                    <span className="w-1.5 h-1.5 bg-green-600 rounded-full animate-livePulse"></span>
+                  <div className={`flex items-center gap-1 text-xs font-display font-semibold ${proyecto.estado === 'En mantenimiento' ? 'text-amber-600' : 'text-green-600'}`}>
+                    <span className={`w-1.5 h-1.5 rounded-full animate-livePulse ${proyecto.estado === 'En mantenimiento' ? 'bg-amber-600' : 'bg-green-600'}`}></span>
                     {proyecto.estado}
                   </div>
                 </div>
@@ -121,13 +113,15 @@ function Proyectos() {
                     ))}
                   </div>
                   <a 
-                    href={proyecto.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-blue text-white px-4 py-2 rounded-lg font-display font-semibold text-sm hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+                    href={proyecto.estado === 'En mantenimiento' ? '#' : proyecto.link}
+                    target={proyecto.estado === 'En mantenimiento' ? '_self' : '_blank'}
+                    rel={proyecto.estado === 'En mantenimiento' ? undefined : 'noopener noreferrer'}
+                    className={`inline-flex items-center gap-2 ${proyecto.estado === 'En mantenimiento' ? 'bg-slate text-slate6 cursor-not-allowed' : 'bg-blue text-white hover:shadow-blue hover:-translate-y-0.5'} px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all duration-300 whitespace-nowrap`}
                   >
-                    Ver sitio
-                    <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                    {proyecto.estado === 'En mantenimiento' ? 'En mantenimiento' : 'Ver sitio'}
+                    {proyecto.estado !== 'En mantenimiento' && (
+                      <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                    )}
                   </a>
                 </div>
               </div>
@@ -137,7 +131,7 @@ function Proyectos() {
 
         {/* Note */}
         <p className="text-center text-xs text-slate2 font-display mt-8 pt-8 border-t border-border">
-          💡 <strong className="text-slate">Nota:</strong> Reemplaza los links de "Ver sitio" con tus URLs de Vercel/Netlify cuando hagas el deploy.
+           <strong className="text-slate"></strong> 
         </p>
       </div>
     </section>
