@@ -82,20 +82,16 @@
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {proyectos.map((proyecto, idx) => (
             <div 
               key={idx}
-              className={`bg-white border border-border rounded-3xl overflow-hidden shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col group opacity-0 animate-fadeUp
-                ${proyecto.destacado ? 'lg:col-span-2 lg:flex-row' : ''}
-              `}
+              className="bg-white border border-border rounded-3xl overflow-hidden shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col group opacity-0 animate-fadeUp"
               style={{ animationDelay: `${idx * 0.12}s` }}
             >
               
               {/* Preview */}
-              <div className={`relative overflow-hidden flex-shrink-0 group-hover:bg-pearl transition-colors
-                ${proyecto.destacado ? 'lg:w-1/2 min-h-72' : 'h-48'}
-              `}>
+              <div className="relative overflow-hidden flex-shrink-0 group-hover:bg-pearl transition-colors h-56 md:h-64">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative w-full h-full flex items-center justify-center bg-pearl2 p-6">
                   {proyecto.estado === 'En mantenimiento' ? (
@@ -121,7 +117,7 @@
               </div>
 
               {/* Content */}
-              <div className={`p-6 lg:p-7 flex flex-col flex-1 ${proyecto.destacado ? 'lg:w-1/2' : ''}`}>
+              <div className="p-6 lg:p-7 flex flex-col flex-1">
                 
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="font-display font-black text-lg lg:text-xl text-ink tracking-tight">

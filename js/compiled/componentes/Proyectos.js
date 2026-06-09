@@ -57,19 +57,15 @@ function Proyectos() {
   }, "Proyectos funcionales y en mantenimiento que generan confianza."), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate max-w-2xl font-body"
   }, "Muestras de trabajo pensadas para que tus clientes vean resultados reales y fáciles de usar.")), /*#__PURE__*/React.createElement("div", {
-    className: "grid grid-cols-1 lg:grid-cols-3 gap-6"
+    className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
   }, proyectos.map((proyecto, idx) => /*#__PURE__*/React.createElement("div", {
     key: idx,
-    className: `bg-white border border-border rounded-3xl overflow-hidden shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col group opacity-0 animate-fadeUp
-                ${proyecto.destacado ? 'lg:col-span-2 lg:flex-row' : ''}
-              `,
+    className: "bg-white border border-border rounded-3xl overflow-hidden shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col group opacity-0 animate-fadeUp",
     style: {
       animationDelay: `${idx * 0.12}s`
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: `relative overflow-hidden flex-shrink-0 group-hover:bg-pearl transition-colors
-                ${proyecto.destacado ? 'lg:w-1/2 min-h-72' : 'h-48'}
-              `
+    className: "relative overflow-hidden flex-shrink-0 group-hover:bg-pearl transition-colors h-56 md:h-64"
   }, /*#__PURE__*/React.createElement("div", {
     className: "absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
   }), /*#__PURE__*/React.createElement("div", {

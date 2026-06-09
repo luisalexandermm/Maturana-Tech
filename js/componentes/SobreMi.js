@@ -90,7 +90,7 @@ function SobreMi() {
             </h2>
 
             <p className="text-lg text-slate leading-relaxed mb-4 font-body">
-              Soy desarrollador web dedicado a crear páginas que transmiten confianza y convierten visitantes en clientes. Trabajo con negocios y emprendimientos para lanzar una presencia digital profesional.
+              Soy estudiante de Ingeniería en Sistemas y desarrollador web apasionado por crear soluciones digitales modernas para negocios y emprendimientos.
             </p>
 
             <p className="text-lg text-slate leading-relaxed mb-8 font-body">

@@ -99,7 +99,7 @@ function SobreMi() {
     className: "text-blue"
   }, "Luis Alexander.")), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate leading-relaxed mb-4 font-body"
-  }, "Soy desarrollador web dedicado a crear páginas que transmiten confianza y convierten visitantes en clientes. Trabajo con negocios y emprendimientos para lanzar una presencia digital profesional."), /*#__PURE__*/React.createElement("p", {
+  }, "Soy estudiante de Ingeniería en Sistemas y desarrollador web apasionado por crear soluciones digitales modernas para negocios y emprendimientos."), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate leading-relaxed mb-8 font-body"
   }, "Cada proyecto se construye con diseño claro, velocidad real y un enfoque práctico en resultados que generen contactos y ventas."), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-wrap gap-2 mb-8"

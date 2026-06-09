@@ -39,13 +39,13 @@ function Contacto() {
   }, "Hablemos"), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate font-body max-w-2xl mx-auto"
   }, "\xBFListo para construir algo incre\xEDble? Elige tu canal preferido.")), /*#__PURE__*/React.createElement("div", {
-    className: "grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6"
+    className: "grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 justify-items-center"
   }, canales.map((canal, idx) => /*#__PURE__*/React.createElement("a", {
     key: idx,
     href: canal.link,
     target: "_blank",
     rel: "noopener noreferrer",
-    className: `bg-white border border-border rounded-2xl p-8 lg:p-10 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fadeUp flex flex-col items-center ${canal.etiqueta === 'Correo electrónico' ? 'md:col-span-3 lg:col-span-2' : ''}`,
+    className: `w-full max-w-[420px] box-border bg-white border border-border rounded-2xl p-8 lg:p-10 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fadeUp flex flex-col items-center ${canal.etiqueta === 'Correo electrónico' ? 'md:col-span-3 lg:col-span-2' : ''}`,
     style: {
       animationDelay: `${idx * 0.12}s`
     }
