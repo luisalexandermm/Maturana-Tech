@@ -22,8 +22,8 @@ function Servicios() {
     },
     {
       icono: '🛠️',
-      titulo: 'Webs Autogestionadas',
-      descripcion: 'Sitios con CMS o panel de administración para que gestiones tu propio contenido sin depender de un desarrollador.'
+      titulo: 'Mantenimiento Web Básico',
+      descripcion: 'Soporte y mejoras frontend: actualizaciones, corrección de errores, optimización de rendimiento y ajustes visuales en tu sitio.'
     }
   ];
 

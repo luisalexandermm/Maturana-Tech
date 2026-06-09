@@ -5,44 +5,42 @@ function Proyectos() {
     nombre: 'Vías del Chocó',
     descripcion: 'Plataforma colaborativa para reportar y consultar el estado de las vías en tiempo real. Los usuarios pueden registrar incidentes en el mapa, ver alertas activas y seguir el historial.',
     imagen: 'assets/logos/viaschoco.png',
-    link: 'https://viaschoco.vercel.app/',
+    link: 'https://luisalexandermm.github.io/viaschoco/',
     tag: '⭐ Destacado',
     tecnologias: ['React', 'Firebase', 'Node.js', 'Leaflet', 'Vercel'],
     destacado: true,
     estado: 'En vivo'
   }, {
-    nombre: 'StyleZone by Luisito',
+    nombre: 'StyleZone',
     descripcion: 'Tienda de accesorios tech con catálogo multi-página (audífonos, teclados, smartwatches). CSS personalizado y lógica de carrito en JavaScript vanilla.',
     imagen: 'assets/logos/stylezone.png',
-    link: '',
+    link: '#',
     tag: '🛍️ E-commerce',
     tecnologias: ['HTML', 'CSS', 'JavaScript'],
-    estado: 'En vivo'
+    estado: 'En mantenimiento'
   }, {
     nombre: 'EcoPacific',
     descripcion: 'Web de conciencia ambiental para la región del Pacífico colombiano. Estructura multi-página con navegación interna, galería y contenido informativo.',
     imagen: 'assets/logos/ecopacific.png',
-    link: '',
+    link: '#',
     tag: '🌿 Ambiental',
     tecnologias: ['HTML', 'CSS'],
-    estado: 'En vivo'
+    estado: 'En mantenimiento'
   }, {
     nombre: 'AgroMarket',
     descripcion: 'Plataforma de mercado agrícola local. Conecta a productores campesinos con consumidores a través de una interfaz limpia y accesible.',
     imagen: 'assets/logos/agromarket.png',
-    link: 'https://agromarket.netlify.app',
+    link: '#',
     tag: '🌾 Marketplace',
     tecnologias: ['HTML', 'CSS'],
-    estado: 'En vivo'
-  }, {
-    nombre: 'StyleZone',
-    descripcion: 'Versión original de StyleZone. Exploración de diseño visual con CSS puro — tipografía, paletas y layout totalmente personalizados.',
-    imagen: 'assets/logos/stylezone-original.png',
-    link: 'https://stylezone.netlify.app',
-    tag: '🎨 CSS Design',
-    tecnologias: ['HTML', 'CSS'],
-    estado: 'En vivo'
+    estado: 'En mantenimiento'
   }];
+  const handleMantenimiento = (e, estado) => {
+    if (estado === 'En mantenimiento') {
+      e.preventDefault();
+      alert('En mantenimiento');
+    }
+  };
   return /*#__PURE__*/React.createElement("section", {
     id: "proyectos",
     className: "py-24 lg:py-32 bg-white"
@@ -76,7 +74,13 @@ function Proyectos() {
     className: "absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
   }), /*#__PURE__*/React.createElement("div", {
     className: "relative w-full h-full flex items-center justify-center bg-pearl2 p-6"
-  }, /*#__PURE__*/React.createElement("img", {
+  }, proyecto.estado === 'En mantenimiento' ? /*#__PURE__*/React.createElement("div", {
+    className: "text-center px-4 py-6 rounded-3xl border border-dashed border-slate/40 bg-slate-50"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-sm font-display font-bold uppercase text-amber-600 tracking-wide"
+  }, "En mantenimiento"), /*#__PURE__*/React.createElement("p", {
+    className: "text-xs text-slate mt-2"
+  }, "Esta secci\xF3n est\xE1 en mantenimiento.")) : /*#__PURE__*/React.createElement("img", {
     src: proyecto.imagen,
     alt: `${proyecto.nombre} logo`,
     className: "max-w-full max-h-full object-contain"
@@ -89,9 +93,9 @@ function Proyectos() {
   }, /*#__PURE__*/React.createElement("h3", {
     className: "font-display font-black text-lg lg:text-xl text-ink tracking-tight"
   }, proyecto.nombre), /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center gap-1 text-xs font-display font-semibold text-green-600"
+    className: `flex items-center gap-1 text-xs font-display font-semibold ${proyecto.estado === 'En mantenimiento' ? 'text-amber-600' : 'text-green-600'}`
   }, /*#__PURE__*/React.createElement("span", {
-    className: "w-1.5 h-1.5 bg-green-600 rounded-full animate-livePulse"
+    className: `w-1.5 h-1.5 rounded-full animate-livePulse ${proyecto.estado === 'En mantenimiento' ? 'bg-amber-600' : 'bg-green-600'}`
   }), proyecto.estado)), /*#__PURE__*/React.createElement("p", {
     className: "text-sm lg:text-base text-slate leading-relaxed mb-5 flex-1"
   }, proyecto.descripcion), /*#__PURE__*/React.createElement("div", {
@@ -103,10 +107,11 @@ function Proyectos() {
     className: "bg-pearl2 text-slate border border-border rounded px-2.5 py-1 text-xs font-display font-bold tracking-wider"
   }, tech))), /*#__PURE__*/React.createElement("a", {
     href: proyecto.link,
-    target: "_blank",
-    rel: "noopener noreferrer",
-    className: "inline-flex items-center gap-2 bg-blue text-white px-4 py-2 rounded-lg font-display font-semibold text-sm hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
-  }, "Ver sitio", /*#__PURE__*/React.createElement("svg", {
+    onClick: e => handleMantenimiento(e, proyecto.estado),
+    target: proyecto.estado === 'En mantenimiento' ? '_self' : '_blank',
+    rel: proyecto.estado === 'En mantenimiento' ? undefined : 'noopener noreferrer',
+    className: `inline-flex items-center gap-2 ${proyecto.estado === 'En mantenimiento' ? 'bg-slate text-slate6 cursor-not-allowed' : 'bg-blue text-white hover:shadow-blue hover:-translate-y-0.5'} px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all duration-300 whitespace-nowrap`
+  }, proyecto.estado === 'En mantenimiento' ? 'En mantenimiento' : 'Ver sitio', proyecto.estado !== 'En mantenimiento' && /*#__PURE__*/React.createElement("svg", {
     width: "13",
     height: "13",
     fill: "none",
@@ -117,7 +122,7 @@ function Proyectos() {
     d: "M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
   })))))))), /*#__PURE__*/React.createElement("p", {
     className: "text-center text-xs text-slate2 font-display mt-8 pt-8 border-t border-border"
-  }, "\uD83D\uDCA1 ", /*#__PURE__*/React.createElement("strong", {
+  }, /*#__PURE__*/React.createElement("strong", {
     className: "text-slate"
-  }, "Nota:"), " Reemplaza los links de \"Ver sitio\" con tus URLs de Vercel/Netlify cuando hagas el deploy.")));
+  }))));
 }

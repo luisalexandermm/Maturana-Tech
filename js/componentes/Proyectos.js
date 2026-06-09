@@ -11,10 +11,10 @@ function Proyectos() {
       estado: 'En vivo'
     },
     {
-      nombre: 'StyleZone ',
+      nombre: 'StyleZone',
       descripcion: 'Tienda de accesorios tech con catálogo multi-página (audífonos, teclados, smartwatches). CSS personalizado y lógica de carrito en JavaScript vanilla.',
       imagen: 'assets/logos/stylezone.png',
-      link: 'https://luisalexandermm.github.io/stylezone-byluisito-/',
+      link: '#',
       tag: '🛍️ E-commerce',
       tecnologias: ['HTML', 'CSS', 'JavaScript'],
       estado: 'En mantenimiento'
@@ -23,7 +23,7 @@ function Proyectos() {
       nombre: 'EcoPacific',
       descripcion: 'Web de conciencia ambiental para la región del Pacífico colombiano. Estructura multi-página con navegación interna, galería y contenido informativo.',
       imagen: 'assets/logos/ecopacific.png',
-      link: 'https://luisalexandermm.github.io/ecopacific/',
+      link: '#',
       tag: '🌿 Ambiental',
       tecnologias: ['HTML', 'CSS'],
       estado: 'En mantenimiento'
@@ -32,13 +32,20 @@ function Proyectos() {
       nombre: 'AgroMarket',
       descripcion: 'Plataforma de mercado agrícola local. Conecta a productores campesinos con consumidores a través de una interfaz limpia y accesible.',
       imagen: 'assets/logos/agromarket.png',
-      link: 'https://luisalexandermm.github.io/agromarket/',
+      link: '#',
       tag: '🌾 Marketplace',
       tecnologias: ['HTML', 'CSS'],
       estado: 'En mantenimiento'
     },
    
   ];
+
+  const handleMantenimiento = (e, estado) => {
+    if (estado === 'En mantenimiento') {
+      e.preventDefault();
+      alert('En mantenimiento');
+    }
+  };
 
   return (
     <section id="proyectos" className="py-24 lg:py-32 bg-white">
@@ -75,11 +82,22 @@ function Proyectos() {
               `}>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative w-full h-full flex items-center justify-center bg-pearl2 p-6">
-                  <img
-                    src={proyecto.imagen}
-                    alt={`${proyecto.nombre} logo`}
-                    className="max-w-full max-h-full object-contain"
-                  />
+                  {proyecto.estado === 'En mantenimiento' ? (
+                    <div className="text-center px-4 py-6 rounded-3xl border border-dashed border-slate/40 bg-slate-50">
+                      <p className="text-sm font-display font-bold uppercase text-amber-600 tracking-wide">
+                        En mantenimiento
+                      </p>
+                      <p className="text-xs text-slate mt-2">
+                        Esta sección está en mantenimiento.
+                      </p>
+                    </div>
+                  ) : (
+                    <img
+                      src={proyecto.imagen}
+                      alt={`${proyecto.nombre} logo`}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  )}
                 </div>
                 <div className="absolute top-3 left-3 bg-blue text-white px-3 py-1 rounded-full text-xs font-display font-bold">
                   {proyecto.tag}
@@ -113,7 +131,8 @@ function Proyectos() {
                     ))}
                   </div>
                   <a 
-                    href={proyecto.estado === 'En mantenimiento' ? '#' : proyecto.link}
+                    href={proyecto.link}
+                    onClick={(e) => handleMantenimiento(e, proyecto.estado)}
                     target={proyecto.estado === 'En mantenimiento' ? '_self' : '_blank'}
                     rel={proyecto.estado === 'En mantenimiento' ? undefined : 'noopener noreferrer'}
                     className={`inline-flex items-center gap-2 ${proyecto.estado === 'En mantenimiento' ? 'bg-slate text-slate6 cursor-not-allowed' : 'bg-blue text-white hover:shadow-blue hover:-translate-y-0.5'} px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all duration-300 whitespace-nowrap`}

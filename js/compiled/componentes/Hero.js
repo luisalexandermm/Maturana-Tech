@@ -40,14 +40,14 @@ function Hero() {
   }, /*#__PURE__*/React.createElement("span", {
     className: "w-1.5 h-1.5 bg-blue rounded-full animate-pulse"
   }), "Disponible para nuevos proyectos"), /*#__PURE__*/React.createElement("h1", {
-    className: "font-display font-black text-4xl sm:text-5xl lg:text-7xl leading-tight text-ink tracking-tight -mb-2 animate-fadeUp",
+    className: "font-display font-black text-5xl lg:text-7xl leading-tight text-ink tracking-tight -mb-2 animate-fadeUp",
     style: {
       animationDelay: '0.1s'
     }
   }, "Dise\xF1o y desarrollo", /*#__PURE__*/React.createElement("br", null), "web ", /*#__PURE__*/React.createElement("em", {
     className: "font-display not-italic bg-gradient-to-r from-blue to-blue/75 bg-clip-text text-transparent"
   }, "moderno"), /*#__PURE__*/React.createElement("br", null), "para negocios."), /*#__PURE__*/React.createElement("p", {
-    className: "text-lg text-slate leading-relaxed max-w-xl sm:max-w-md font-body animate-fadeUp",
+    className: "text-lg text-slate leading-relaxed max-w-md font-body animate-fadeUp",
     style: {
       animationDelay: '0.22s'
     }

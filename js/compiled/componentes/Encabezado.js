@@ -57,8 +57,7 @@ function Encabezado() {
     "aria-label": "Men\xFA"
   }, /*#__PURE__*/React.createElement("span", {
     className: "text-xl"
-  }, "☰"))),
- /*#__PURE__*/React.createElement("div", {
+  }, "\u2630")))), /*#__PURE__*/React.createElement("div", {
     className: `lg:hidden overflow-hidden transition-all duration-300 bg-white border-t ${menuAbierto ? 'max-h-96 border-border' : 'max-h-0'}`
   }, /*#__PURE__*/React.createElement("a", {
     href: "#inicio",
@@ -80,5 +79,5 @@ function Encabezado() {
     href: "#contacto",
     onClick: () => setMenuAbierto(false),
     className: "block px-7 py-3.5 font-display text-sm font-semibold text-slate hover:text-blue transition-colors"
-  }, "Contacto"))));
+  }, "Contacto")));
 }
