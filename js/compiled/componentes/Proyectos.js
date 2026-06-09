@@ -3,7 +3,7 @@
 function Proyectos() {
   const proyectos = [{
     nombre: 'Vías del Chocó',
-    descripcion: 'Plataforma colaborativa con información de vías en vivo. Ideal para mostrar resultados reales y confiables en línea.',
+    descripcion: 'Panel de monitoreo con estado de vías en tiempo real. Arquitectura React + Firebase para carga dinámica de datos, actualización automatizada y despliegue en Vercel.',
     imagen: 'assets/logos/viaschoco.png',
     link: 'https://viaschoco.vercel.app/',
     tag: '⭐ Destacado',
@@ -12,7 +12,7 @@ function Proyectos() {
     estado: 'En vivo'
   }, {
     nombre: 'StyleZone',
-    descripcion: 'Landing de tienda online con diseño claro, navegación simple y enfoque en mostrar productos con estilo.',
+    descripcion: 'Landing de e-commerce optimizada para performance y conversión. HTML/CSS responsivo con interacciones JavaScript ligeras para catálogo y navegación fluida.',
     imagen: 'assets/logos/stylezone.png',
     link: '#',
     tag: '🛍️ E-commerce',
@@ -20,7 +20,7 @@ function Proyectos() {
     estado: 'En mantenimiento'
   }, {
     nombre: 'EcoPacific',
-    descripcion: 'Sitio informativo para proyectos ambientales, con estructura profesional y contenido fácil de explorar.',
+    descripcion: 'Portal institucional para proyectos ambientales con estructura de contenido escalable, diseño accesible y despliegue estático rápido.',
     imagen: 'assets/logos/ecopacific.png',
     link: '#',
     tag: '🌿 Inspiración',
@@ -28,7 +28,7 @@ function Proyectos() {
     estado: 'En mantenimiento'
   }, {
     nombre: 'AgroMarket',
-    descripcion: 'Plataforma de comercio electrónico para productos agrícolas con enfoque en conectar productores y consumidores.',
+    descripcion: 'Marketplace agrícola con frontend React y backend Node.js/MongoDB. Diseño de catálogo de productos, flujo de compra y modelo de datos orientado a inventario.',
     imagen: 'assets/logos/agromarket.png',
     link: '#',
     tag: '🌾 Agricultura',
@@ -54,9 +54,9 @@ function Proyectos() {
     className: "w-1.5 h-1.5 bg-blue rounded-full"
   }), "Proyectos en vivo y en mantenimiento"), /*#__PURE__*/React.createElement("h2", {
     className: "font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4"
-  }, "Proyectos funcionales y en mantenimiento que generan confianza."), /*#__PURE__*/React.createElement("p", {
+  }, "Proyectos técnicos y mantenibles con arquitectura clara y despliegue real."), /*#__PURE__*/React.createElement("p", {
     className: "text-lg text-slate max-w-2xl font-body"
-  }, "Muestras de trabajo pensadas para que tus clientes vean resultados reales y fáciles de usar.")), /*#__PURE__*/React.createElement("div", {
+  }, "Demostraciones enfocadas en fiabilidad, rendimiento y resultados profesionales para equipos de desarrollo.")), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
   }, proyectos.map((proyecto, idx) => /*#__PURE__*/React.createElement("div", {
     key: idx,

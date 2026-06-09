@@ -16,6 +16,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -73,6 +74,15 @@
           }
         }
       }
+    }
+  </script>
+  <script>
+    try {
+      if (localStorage.getItem('modoOscuro') === 'true') {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {
+      console.warn('No se pudo leer modoOscuro de localStorage', e);
     }
   </script>
 

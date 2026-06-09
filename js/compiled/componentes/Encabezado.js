@@ -3,13 +3,23 @@
 function Encabezado() {
   const [menuAbierto, setMenuAbierto] = React.useState(false);
   const [enScroll, setEnScroll] = React.useState(false);
+  const [modoOscuro, setModoOscuro] = React.useState(false);
   React.useEffect(() => {
     const handleScroll = () => {
       setEnScroll(window.scrollY > 20);
     };
+    const savedModo = localStorage.getItem('modoOscuro') === 'true';
+    setModoOscuro(savedModo);
+    document.documentElement.classList.toggle('dark', savedModo);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  const toggleModoOscuro = () => {
+    const nuevoModo = !modoOscuro;
+    setModoOscuro(nuevoModo);
+    localStorage.setItem('modoOscuro', nuevoModo);
+    document.documentElement.classList.toggle('dark', nuevoModo);
+  };
   return /*#__PURE__*/React.createElement("header", {
     className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${enScroll ? 'bg-white/88 backdrop-blur-[20px] border-b border-border shadow-sm' : 'bg-white/88 backdrop-blur-[20px]'}`
   }, /*#__PURE__*/React.createElement("div", {
@@ -26,7 +36,7 @@ function Encabezado() {
   }), /*#__PURE__*/React.createElement("span", null, "Maturana ", /*#__PURE__*/React.createElement("span", {
     className: "text-blue"
   }, "Tech"))), /*#__PURE__*/React.createElement("div", {
-    className: "hidden lg:flex items-center gap-8 ml-auto"
+    className: "hidden lg:flex items-center gap-4 ml-auto"
   }, /*#__PURE__*/React.createElement("a", {
     href: "#inicio",
     className: "font-display text-sm font-semibold text-slate hover:text-ink transition-colors relative group"
@@ -52,7 +62,11 @@ function Encabezado() {
     className: "font-display text-sm font-semibold text-slate hover:text-ink transition-colors relative group"
   }, "Contacto", /*#__PURE__*/React.createElement("span", {
     className: "absolute bottom-0 left-0 w-0 h-0.5 bg-blue group-hover:w-full transition-all duration-200"
-  }))), /*#__PURE__*/React.createElement("a", {
+  }))), /*#__PURE__*/React.createElement("button", {
+    onClick: toggleModoOscuro,
+    className: "fixed bottom-6 right-6 z-50 inline-flex items-center justify-center rounded-full border border-border bg-slate-100 text-slate w-12 h-12 p-0 font-display font-semibold text-sm hover:bg-slate-200 transition-all duration-200 shadow-lg",
+    "aria-label": "Cambiar modo oscuro"
+  }, modoOscuro ? '☀️' : '🌙'), /*#__PURE__*/React.createElement("a", {
     href: "#contacto",
     className: "hidden lg:inline-flex items-center gap-2 bg-blue text-white px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300 ml-2"
   }, "Hablemos"), /*#__PURE__*/React.createElement("button", {
@@ -63,7 +77,10 @@ function Encabezado() {
     className: "text-xl"
   }, "\u2630")))), /*#__PURE__*/React.createElement("div", {
     className: `lg:hidden overflow-hidden transition-all duration-300 bg-white border-t ${menuAbierto ? 'max-h-96 border-border' : 'max-h-0'}`
-  }, /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: toggleModoOscuro,
+    className: "w-full text-left px-7 py-3.5 font-display text-sm font-semibold text-slate border-b border-border hover:text-blue transition-colors"
+  }, modoOscuro ? 'Modo claro' : 'Modo oscuro'), /*#__PURE__*/React.createElement("a", {
     href: "#inicio",
     onClick: () => setMenuAbierto(false),
     className: "block px-7 py-3.5 font-display text-sm font-semibold text-slate border-b border-border hover:text-blue transition-colors"
