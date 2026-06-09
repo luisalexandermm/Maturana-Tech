@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node ./node_modules/@babel/cli/bin/babel.js js/componentes --out-dir js/compiled/componentes --extensions \".js\" && node ./node_modules/@babel/cli/bin/babel.js js/app.js --out-file js/compiled/app.js --extensions \".js\"",
     "vercel-build": "npm run build",
+    "deploy": "npx vercel --prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +17,7 @@
     "@babel/cli": "^7.29.7",
     "@babel/core": "^7.29.7",
     "@babel/preset-env": "^7.29.7",
-    "@babel/preset-react": "^7.29.7"
+    "@babel/preset-react": "^7.29.7",
+    "vercel": "^54.10.2"
   }
 }
