@@ -1,0 +1,20 @@
+{
+  "name": "fronetnd",
+  "version": "1.0.0",
+  "description": "Proyecto web completamente reorganizado con **React (CDN)**, **Tailwind CSS (CDN)** y **componentes modulares**. Mismo diseño, código limpio y profesional.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx babel js/componentes --out-dir js/compiled/componentes --extensions \".js\" && npx babel js/app.js --out-file js/compiled/app.js --extensions \".js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@babel/cli": "^7.29.7",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7"
+  }
+}

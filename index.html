@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./assets/logos/logo m.png" type="image/png" />
+  <title>Maturanna Tech - Diseño y Desarrollo Web Moderno</title>
+  <meta name="description" content="Diseño y desarrollo web moderno para negocios. Proyectos reales, código limpio, resultados que se ven." />
+  
+  <!-- Fonts Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'white': '#ffffff',
+            'pearl': '#f9fafb',
+            'pearl2': '#f3f5f8',
+            'ink': '#0c0e16',
+            'ink2': '#1a1d2e',
+            'slate': '#5a6075',
+            'slate2': '#8b92a9',
+            'border': '#e4e8f0',
+            'border2': '#d0d6e4',
+            'blue': '#3b6ef6',
+            'blue-dim': '#eef2fe',
+            'blue-mid': '#c7d4fd',
+          },
+          fontFamily: {
+            'display': ['Poppins', 'sans-serif'],
+            'body': ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'xs': '0 1px 4px rgba(0,0,0,.05)',
+            'sm': '0 2px 12px rgba(0,0,0,.07)',
+            'md': '0 6px 28px rgba(0,0,0,.09)',
+            'lg': '0 16px 56px rgba(0,0,0,.12)',
+            'blue': '0 8px 32px rgba(59, 110, 246, .22)',
+          },
+          keyframes: {
+            floatY: {
+              '0%': { transform: 'translateY(0)' },
+              '100%': { transform: 'translateY(-14px)' }
+            },
+            pulse: {
+              '0%, 100%': { opacity: '1', transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(59, 110, 246, .4)' },
+              '50%': { opacity: '.7', transform: 'scale(.85)', boxShadow: '0 0 0 5px rgba(59, 110, 246, 0)' }
+            },
+            spin: {
+              'to': { transform: 'rotate(360deg)' }
+            },
+            fadeUp: {
+              'from': { opacity: '0', transform: 'translateY(24px)' },
+              'to': { opacity: '1', transform: 'none' }
+            },
+            livePulse: {
+              '0%, 100%': { boxShadow: '0 0 0 0 rgba(22, 163, 74, .4)' },
+              '50%': { boxShadow: '0 0 0 5px rgba(22, 163, 74, 0)' }
+            }
+          },
+          animation: {
+            floatY: 'floatY 5s ease-in-out infinite alternate',
+            pulse: 'pulse 2s ease-in-out infinite',
+            spin: 'spin 18s linear infinite',
+            fadeUp: 'fadeUp .75s cubic-bezier(.22,1,.36,1) both',
+            livePulse: 'livePulse 1.5s ease-in-out infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos personalizados (animaciones y detalles específicos) -->
+  <link rel="stylesheet" href="./css/estilos.css" />
+  
+  <style>
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { overflow-x: hidden; }
+    * { -webkit-font-smoothing: antialiased; }
+    ::selection { background: #eef2fe; color: #3b6ef6; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #f9fafb; }
+    ::-webkit-scrollbar-thumb { background: #d0d6e4; border-radius: 3px; }
+  </style>
+</head>
+<body class="bg-white text-ink font-body">
+
+  <!-- React Root -->
+  <div id="root"></div>
+  
+  <!-- React y ReactDOM locales -->
+  <script src="js/libs/react.production.min.js"></script>
+  <script src="js/libs/react-dom.production.min.js"></script>
+
+  <!-- Componentes compilados -->
+  <script src="js/compiled/componentes/Encabezado.js"></script>
+  <script src="js/compiled/componentes/Hero.js"></script>
+  <script src="js/compiled/componentes/Estadisticas.js"></script>
+  <script src="js/compiled/componentes/Proyectos.js"></script>
+  <script src="js/compiled/componentes/Servicios.js"></script>
+  <script src="js/compiled/componentes/SobreMi.js"></script>
+  <script src="js/compiled/componentes/CtaBand.js"></script>
+  <script src="js/compiled/componentes/Contacto.js"></script>
+  <script src="js/compiled/componentes/Footer.js"></script>
+  <script src="js/compiled/app.js"></script>
+</body>
+</html>
