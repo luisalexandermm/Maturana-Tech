@@ -65,6 +65,11 @@ function Encabezado() {
         </nav>
       </div>
 
+      {/* Mobile drawer overlay */}
+      <div className={`lg:hidden fixed inset-0 z-40 bg-black/20 transition-opacity duration-300 ${
+        menuAbierto ? 'opacity-100 visible' : 'opacity-0 invisible'
+      }`} onClick={() => setMenuAbierto(false)}></div>
+
       {/* Mobile drawer */}
       <div className={`lg:hidden fixed top-0 left-0 bottom-0 z-50 w-72 transform bg-teal text-white shadow-xl transition-transform duration-300 ${
         menuAbierto ? 'translate-x-0' : '-translate-x-full'
