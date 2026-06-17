@@ -37,9 +37,7 @@ function Servicios() {
             <span className="w-1.5 h-1.5 bg-teal rounded-full"></span>
             Servicios
           </div>
-          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-teal mb-3">
-            Planes desde $XXX COP
-          </div>
+          
           <h2 className="font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4">
             Servicios diseñados para convertir visitantes en clientes.
           </h2>

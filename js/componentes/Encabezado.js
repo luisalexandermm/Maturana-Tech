@@ -21,7 +21,7 @@ function Encabezado() {
           <nav className="flex items-center justify-between flex-wrap h-[68px] gap-4">
           {/* Logo */}
           <a href="#inicio" className="font-display text-lg font-black tracking-tight text-ink whitespace-nowrap flex-shrink-0 flex items-center gap-3">
-            <img src="assets/logos/logo%20m.png" alt="Maturana Tech" className="w-8 h-8 object-contain" />
+            <img src="assets/logos/logo%20m.png" alt="Maturana Tech" className="w-10 h-10 object-contain" />
             <span>Maturana <span className="text-teal">Tech</span></span>
           </a>
 
@@ -66,24 +66,41 @@ function Encabezado() {
       </div>
 
       {/* Mobile drawer */}
-      <div className={`lg:hidden overflow-hidden transition-all duration-300 bg-white border-t ${
-        menuAbierto ? 'max-h-96 border-border' : 'max-h-0'
+      <div className={`lg:hidden fixed top-0 left-0 bottom-0 z-50 w-72 transform bg-teal text-white shadow-xl transition-transform duration-300 ${
+        menuAbierto ? 'translate-x-0' : '-translate-x-full'
       }`}>
-        <a href="#inicio" onClick={() => setMenuAbierto(false)} className="block px-7 py-3.5 font-display text-sm font-semibold text-slate border-b border-border hover:text-teal transition-colors">
-          Inicio
-        </a>
-        <a href="#proyectos" onClick={() => setMenuAbierto(false)} className="block px-7 py-3.5 font-display text-sm font-semibold text-slate border-b border-border hover:text-teal transition-colors">
-          Proyectos
-        </a>
-        <a href="#servicios" onClick={() => setMenuAbierto(false)} className="block px-7 py-3.5 font-display text-sm font-semibold text-slate border-b border-border hover:text-teal transition-colors">
-          Servicios
-        </a>
-        <a href="#sobre-mi" onClick={() => setMenuAbierto(false)} className="block px-7 py-3.5 font-display text-sm font-semibold text-slate border-b border-border hover:text-teal transition-colors">
-          Sobre mí
-        </a>
-        <a href="#contacto" onClick={() => setMenuAbierto(false)} className="block px-7 py-3.5 font-display text-sm font-semibold text-slate hover:text-teal transition-colors">
-          Contacto
-        </a>
+        <div className="flex h-full flex-col p-5">
+          <div className="flex items-center justify-between mb-8">
+            <div className="font-display text-lg font-black">Menu</div>
+            <button
+              onClick={() => setMenuAbierto(false)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              aria-label="Cerrar menú"
+            >
+              ×
+            </button>
+          </div>
+          <nav className="flex flex-col gap-4">
+            <a href="#inicio" onClick={() => setMenuAbierto(false)} className="rounded-full px-4 py-3 font-display text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              Inicio
+            </a>
+            <a href="#proyectos" onClick={() => setMenuAbierto(false)} className="rounded-full px-4 py-3 font-display text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              Proyectos
+            </a>
+            <a href="#servicios" onClick={() => setMenuAbierto(false)} className="rounded-full px-4 py-3 font-display text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              Servicios
+            </a>
+            <a href="#sobre-mi" onClick={() => setMenuAbierto(false)} className="rounded-full px-4 py-3 font-display text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              Sobre mí
+            </a>
+            <a href="#contacto" onClick={() => setMenuAbierto(false)} className="rounded-full px-4 py-3 font-display text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              Contacto
+            </a>
+          </nav>
+          <div className="mt-auto pt-6 text-sm text-white/75">
+            Cierra este menú con el botón superior o tocando un enlace.
+          </div>
+        </div>
       </div>
     </header>
   );
