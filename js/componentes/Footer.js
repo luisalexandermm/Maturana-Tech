@@ -23,7 +23,7 @@ function Footer() {
           {/* Brand */}
           <div>
             <div className="font-display text-lg font-black text-white">
-              Maturanna <span className="text-blue">Innovate</span> Tech
+              Maturanna <span className="text-teal">Innovate</span> Tech
             </div>
             <div className="text-xs text-white/35 mt-1.5 font-body">
               Código · Diseño · Innovación — Quibdó, Colombia
@@ -65,13 +65,13 @@ function Footer() {
               };
 
               return (
-                <a
-                  key={idx}
-                  href={red.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/6 border border-white/8 flex items-center justify-center hover:bg-blue/15 hover:border-blue/30 transition-all duration-300"
-                >
+                  <a
+                    key={idx}
+                    href={red.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-lg bg-white/6 border border-white/8 flex items-center justify-center hover:bg-teal/15 hover:border-teal/30 transition-all duration-300"
+                  >
                   {iconSvg[red.icono]}
                 </a>
               );

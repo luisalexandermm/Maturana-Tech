@@ -33,13 +33,13 @@
       nombre: 'EcoPacific',
       descripcion: 'Portal institucional para proyectos ambientales con estructura de contenido escalable, diseño accesible y despliegue estático rápido.',
       imagen: 'assets/logos/ecopacific.png',
-      link: '#',
+      link: 'https://luisalexandermm.github.io/ecopacific/',
       tag: '🌿 Inspiración',
       tecnologias: [
         { nombre: 'HTML', logo: 'assets/logos/html5.png' },
         { nombre: 'CSS', logo: 'assets/logos/css.png' }
       ],
-      estado: 'En mantenimiento'
+      estado: 'disponible'
     },
     {
       nombre: 'AgroMarket',
@@ -69,8 +69,8 @@
         
         {/* Section Header */}
         <div className="mb-14 opacity-0 animate-fadeUp">
-          <div className="inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4">
-            <span className="w-1.5 h-1.5 bg-blue rounded-full"></span>
+          <div className="inline-flex items-center gap-2 bg-teal-dim border border-teal-mid text-teal px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4">
+            <span className="w-1.5 h-1.5 bg-teal rounded-full"></span>
             Proyectos en vivo y en mantenimiento
           </div>
           <h2 className="font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4">
@@ -92,7 +92,7 @@
               
               {/* Preview */}
               <div className="relative overflow-hidden flex-shrink-0 group-hover:bg-pearl transition-colors h-56 md:h-64">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-teal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative w-full h-full flex items-center justify-center bg-pearl2 dark:bg-slate-900 p-6">
                   {proyecto.estado === 'En mantenimiento' ? (
                     <div className="text-center px-4 py-6 rounded-3xl border border-dashed border-slate/40 bg-slate-50">
@@ -111,7 +111,7 @@
                     />
                   )}
                 </div>
-                <div className="absolute top-3 left-3 bg-blue text-white px-3 py-1 rounded-full text-xs font-display font-bold">
+                <div className="absolute top-3 left-3 bg-teal text-white px-3 py-1 rounded-full text-xs font-display font-bold">
                   {proyecto.tag}
                 </div>
               </div>
@@ -151,7 +151,7 @@
                     onClick={(e) => handleMantenimiento(e, proyecto.estado)}
                     target={proyecto.estado === 'En mantenimiento' ? '_self' : '_blank'}
                     rel={proyecto.estado === 'En mantenimiento' ? undefined : 'noopener noreferrer'}
-                    className={`inline-flex items-center gap-2 ${proyecto.estado === 'En mantenimiento' ? 'bg-slate text-slate6 cursor-not-allowed' : 'bg-blue text-white hover:shadow-blue hover:-translate-y-0.5'} px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all duration-300 whitespace-nowrap`}
+                    className={`inline-flex items-center gap-2 ${proyecto.estado === 'En mantenimiento' ? 'bg-slate text-slate6 cursor-not-allowed' : 'bg-teal text-white hover:shadow-teal hover:-translate-y-0.5'} px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all duration-300 whitespace-nowrap`}
                   >
                     {proyecto.estado === 'En mantenimiento' ? 'En mantenimiento' : 'Ver proyecto'}
                     {proyecto.estado !== 'En mantenimiento' && (

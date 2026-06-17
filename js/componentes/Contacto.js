@@ -22,7 +22,7 @@ function Contacto() {
       valor: 'contacto.maturanainnovate@gmail.com',
       hint: 'Enviar email →',
       link: 'mailto:contacto.maturanainnovate@gmail.com',
-      bgIcon: 'bg-blue-dim'
+      bgIcon: 'bg-teal-dim'
     }
   ];
 
@@ -32,8 +32,8 @@ function Contacto() {
         
         {/* Section Header */}
         <div className="text-center mb-16 opacity-0 animate-fadeUp">
-          <div className="inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4">
-            <span className="w-1.5 h-1.5 bg-blue rounded-full"></span>
+          <div className="inline-flex items-center gap-2 bg-teal-dim border border-teal-mid text-teal px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4">
+            <span className="w-1.5 h-1.5 bg-teal rounded-full"></span>
             Contacto
           </div>
           <h2 className="font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4">
@@ -68,7 +68,7 @@ function Contacto() {
                 {canal.valor}
               </div>
               
-              <div className="text-xs text-blue font-display font-semibold">
+              <div className="text-xs text-teal font-display font-semibold">
                 {canal.hint}
               </div>
             </a>

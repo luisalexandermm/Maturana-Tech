@@ -3,14 +3,14 @@ function Hero() {
     <section id="inicio" className="min-h-screen flex items-center pt-28 pb-16 relative overflow-hidden">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-radial from-blue/6 via-transparent to-transparent"
+        <div className="absolute inset-0 bg-gradient-radial from-teal/6 via-transparent to-transparent"
              style={{
-               backgroundImage: 'radial-gradient(ellipse 60% 50% at 75% 40%, rgba(59, 110, 246, 0.06) 0%, transparent 70%)',
+               backgroundImage: 'radial-gradient(ellipse 60% 50% at 75% 40%, rgba(15, 118, 110, 0.06) 0%, transparent 70%)',
                opacity: 1
              }}></div>
         <div className="absolute inset-0"
              style={{
-               backgroundImage: 'radial-gradient(ellipse 40% 60% at 20% 70%, rgba(59, 110, 246, 0.04) 0%, transparent 70%)',
+               backgroundImage: 'radial-gradient(ellipse 40% 60% at 20% 70%, rgba(15, 118, 110, 0.04) 0%, transparent 70%)',
              }}></div>
       </div>
 
@@ -31,8 +31,8 @@ function Hero() {
           
           {/* Copy */}
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase animate-fadeUp">
-              <span className="w-1.5 h-1.5 bg-blue rounded-full animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 bg-teal-dim border border-teal-mid text-teal px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase animate-fadeUp">
+              <span className="w-1.5 h-1.5 bg-teal rounded-full animate-pulse"></span>
               Disponible para nuevos proyectos
             </div>
 
@@ -47,11 +47,11 @@ function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-2 animate-fadeUp" style={{ animationDelay: '0.36s' }}>
-              <a href="#contacto" className="inline-flex items-center gap-2 bg-blue text-white px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300">
+              <a href="#contacto" className="inline-flex items-center gap-2 bg-teal text-white px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:shadow-teal hover:-translate-y-0.5 transition-all duration-300">
                 Cotizar proyecto
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              <a href="#proyectos" className="inline-flex items-center gap-2 bg-transparent text-ink border-2 border-border2 px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:border-blue hover:text-blue hover:-translate-y-0.5 transition-all duration-300">
+              <a href="#proyectos" className="inline-flex items-center gap-2 bg-transparent text-ink border-2 border-border2 px-7 py-3 rounded-[10px] font-display font-semibold text-sm hover:border-teal hover:text-teal hover:-translate-y-0.5 transition-all duration-300">
                 Ver proyectos
               </a>
             </div>
@@ -71,13 +71,10 @@ function Hero() {
           </div>
 
           {/* Visual Logo */}
-          <div className="flex flex-col items-center justify-center relative animate-fadeUp mt-10 lg:mt-0" style={{ animationDelay: '0.65s' }}>
+          <div className="flex flex-col items-center justify-center relative mt-10 lg:mt-0">
             <div className="relative w-full h-96 flex flex-col items-center justify-center">
               {/* Logo container - no background, just the logo */}
-              <div 
-                className="relative flex items-center justify-center"
-                style={{ animation: 'floatY 5s ease-in-out infinite alternate' }}
-              >
+              <div className="relative flex items-center justify-center">
                 <img 
                   src="assets/logos/logo m.png" 
                   alt="Maturanna Logo"
@@ -88,7 +85,7 @@ function Hero() {
                   }}
                 />
                 {/* Fallback if image doesn't load */}
-                <div style={{display: 'none'}} className="w-56 h-56 lg:w-80 lg:h-80 bg-gradient-to-br from-blue-dim to-blue-mid flex items-center justify-center text-9xl font-display font-black text-blue">
+                <div style={{display: 'none'}} className="w-56 h-56 lg:w-80 lg:h-80 bg-gradient-to-br from-teal-dim to-teal-mid flex items-center justify-center text-9xl font-display font-black text-teal">
                   M
                 </div>
               </div>
@@ -96,7 +93,7 @@ function Hero() {
               {/* Text below */}
               <div className="text-center mt-8">
                 <h2 className="font-display font-black text-4xl text-ink tracking-tight">
-                  Maturanna <span className="text-blue">Tech</span>
+                  Maturanna <span className="text-teal">Tech</span>
                 </h2>
               </div>
             </div>

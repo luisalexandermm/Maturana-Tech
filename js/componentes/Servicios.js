@@ -33,11 +33,11 @@ function Servicios() {
         
         {/* Section Header */}
         <div className="mb-14 opacity-0 animate-fadeUp">
-          <div className="inline-flex items-center gap-2 bg-blue-dim border border-blue-mid text-blue px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4">
-            <span className="w-1.5 h-1.5 bg-blue rounded-full"></span>
+          <div className="inline-flex items-center gap-2 bg-teal-dim border border-teal-mid text-teal px-4 py-2 rounded-full font-display text-xs font-bold tracking-wider uppercase mb-4">
+            <span className="w-1.5 h-1.5 bg-teal rounded-full"></span>
             Servicios
           </div>
-          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-blue mb-3">
+          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-teal mb-3">
             Planes desde $XXX COP
           </div>
           <h2 className="font-display font-black text-4xl lg:text-5xl leading-tight text-ink tracking-tight mb-4">
@@ -56,7 +56,7 @@ function Servicios() {
               className="bg-white border border-border rounded-2xl p-8 space-y-4 hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fadeUp"
               style={{ animationDelay: `${idx * 0.12}s` }}
             >
-              <div className="w-14 h-14 bg-blue-dim border border-blue-mid rounded-xl flex items-center justify-center text-2xl transition-colors group-hover:bg-blue group-hover:text-white">
+              <div className="w-14 h-14 bg-teal-dim border border-teal-mid rounded-xl flex items-center justify-center text-2xl transition-colors group-hover:bg-teal group-hover:text-white">
                 {servicio.icono}
               </div>
               
