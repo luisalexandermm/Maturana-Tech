@@ -1,0 +1,153 @@
+/* ==================================================================
+   MATURANA TECH · PÁGINA LEGAL
+   Mismo estilo del sitio: blanco tornasol, tinta y acentos cálidos.
+   Índice lateral en computador y barra de pestañas en celular.
+   ================================================================== */
+:root {
+  --perla: #F5F2EE;
+  --nacar: #FAF8F6;
+  --blanco: #FFFFFF;
+  --tinta: #16120F;
+  --tinta-suave: #5E5650;
+  --linea: #E6DFD8;
+  --crema: #F6EFE7;
+  --coral: #EE6A4B;
+  --degradado: linear-gradient(100deg, #F2A541 0%, #EE6A4B 48%, #E2557E 100%);
+  --t-durazno: #F9D9C2; --t-rosa: #F6CFDC; --t-lila: #E2D6F3; --t-cielo: #DCE6F4;
+
+  --f-titulo: "Familjen Grotesk", "Arial Narrow", system-ui, sans-serif;
+  --f-serif: "Instrument Serif", Georgia, serif;
+  --f-texto: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --f-dato: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { background: var(--nacar); scroll-behavior: smooth; scroll-padding-top: 110px; }
+body {
+  margin: 0; color: var(--tinta); font-family: var(--f-texto); font-size: 16.5px; line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(60vw 55vh at 10% 10%, rgba(249,217,194,.7), transparent 62%),
+    radial-gradient(55vw 50vh at 90% 30%, rgba(226,214,243,.7), transparent 62%),
+    radial-gradient(60vw 55vh at 50% 95%, rgba(246,207,220,.7), transparent 62%),
+    var(--nacar);
+  background-attachment: fixed;
+  overflow-x: clip;
+}
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--f-titulo); font-weight: 600; line-height: 1.1; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+p, ul, ol { margin: 0; }
+:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; border-radius: 6px; }
+.serif { font-family: var(--f-serif); font-style: italic; font-weight: 400; }
+.brillo { background: var(--degradado); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .05em; }
+.contenedor { max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
+
+/* Header */
+.cabecera { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; padding: 12px 16px 0; }
+.cabecera-interior {
+  max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 8px 8px 8px 14px; border-radius: 999px;
+  background: rgba(255,255,255,.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,.95); box-shadow: 0 20px 50px -26px rgba(90,60,50,.4);
+}
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.marca img { width: 40px; height: auto; }
+.marca-nombre { display: grid; justify-items: center; line-height: 1; }
+.marca-nombre b { font-family: var(--f-titulo); font-size: 16px; letter-spacing: .12em; }
+.marca-nombre small { font-size: 9px; font-weight: 600; letter-spacing: .6em; margin-right: -.6em; margin-top: 4px; color: var(--tinta-suave); }
+.volver {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  padding: 11px 18px; border-radius: 999px; background: var(--tinta); color: var(--crema); font-weight: 600; font-size: 14.5px;
+}
+
+/* Portada */
+.portada { padding-block: 70px 40px; }
+.etiqueta { font-family: var(--f-dato); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-suave); display: inline-flex; align-items: center; gap: 10px; }
+.etiqueta::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--degradado); }
+.portada h1 { font-size: clamp(40px, 7vw, 88px); letter-spacing: -0.05em; margin: 18px 0 20px; }
+.portada p { color: var(--tinta-suave); max-width: 62ch; font-size: 17.5px; }
+.datos-version { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.datos-version span { font-family: var(--f-dato); font-size: 12px; padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,.7); border: 1px solid var(--linea); }
+
+/* Distribución: índice + contenido */
+.cuerpo { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 48px; padding-bottom: 100px; align-items: start; }
+.indice { position: sticky; top: 100px; display: grid; gap: 4px; }
+.indice p { font-family: var(--f-dato); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: 8px; }
+.indice a {
+  text-decoration: none; padding: 10px 14px; border-radius: 14px; font-weight: 600; font-size: 15px;
+  border: 1px solid transparent; transition: background .3s, border-color .3s;
+}
+.indice a:hover { background: rgba(255,255,255,.6); }
+.indice a.activo { background: rgba(255,255,255,.85); border-color: var(--linea); box-shadow: 0 10px 24px -18px rgba(90,60,50,.5); }
+.indice a.activo::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--degradado); margin-right: 10px; vertical-align: middle; }
+
+.documento { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; min-width: 0; }
+.politica {
+  background: rgba(255,255,255,.62); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.95); border-radius: 28px;
+  box-shadow: 0 30px 60px -44px rgba(90,60,50,.4);
+  padding: clamp(24px, 4vw, 48px);
+}
+.politica > h2 { font-size: clamp(30px, 4vw, 46px); letter-spacing: -0.045em; margin-bottom: 8px; }
+.politica-meta { font-family: var(--f-dato); font-size: 12px; color: var(--tinta-suave); margin-bottom: 22px; }
+.resumen {
+  position: relative; border-radius: 18px; padding: 18px 20px; margin-bottom: 28px;
+  background: linear-gradient(110deg, rgba(249,217,194,.55), rgba(246,207,220,.55) 35%, rgba(226,214,243,.55) 70%, rgba(220,230,244,.55));
+  border: 1px solid rgba(255,255,255,.9);
+}
+.resumen strong { display: block; font-family: var(--f-dato); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+.resumen ul { padding-left: 18px; display: grid; gap: 4px; }
+.politica h3 { font-size: 21px; letter-spacing: -0.02em; margin: 28px 0 10px; }
+.politica p + p { margin-top: 10px; }
+.politica ul, .politica ol { padding-left: 22px; display: grid; gap: 6px; margin-top: 8px; }
+.politica p, .politica li { max-width: 72ch; }
+.politica a { color: #B8432A; text-underline-offset: 3px; }
+.ficha { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin-top: 10px; padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,.7); border: 1px solid var(--linea); }
+.ficha dt { font-weight: 700; font-size: 14.5px; }
+.ficha dd { margin: 0; font-size: 14.5px; min-width: 0; overflow-wrap: anywhere; }
+.completar { background: #FFE9A8; border-radius: 6px; padding: 0 6px; font-weight: 600; }
+.tabla-marco { overflow-x: auto; margin-top: 12px; border-radius: 16px; border: 1px solid var(--linea); background: rgba(255,255,255,.75); }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 560px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--linea); vertical-align: top; }
+th { font-family: var(--f-dato); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-suave); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+.plazos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; }
+.plazo { padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,.75); border: 1px solid var(--linea); }
+.plazo b { display: block; font-family: var(--f-titulo); font-size: 30px; letter-spacing: -0.03em; line-height: 1.1; }
+.plazo span { font-size: 14px; color: var(--tinta-suave); }
+.boton-preferencia {
+  margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  padding: 11px 18px; border-radius: 999px; border: 1px solid var(--linea); background: var(--blanco); font: inherit; font-weight: 600; font-size: 14.5px;
+}
+.boton-preferencia:hover { background: var(--tinta); color: var(--crema); }
+
+.pie { border-top: 1px solid var(--linea); padding-block: 26px 40px; font-size: 14px; color: var(--tinta-suave); }
+.pie .contenedor { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+/* Tablet y celular */
+@media (max-width: 900px) {
+  .cuerpo { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .indice { min-width: 0; max-width: 100%; }
+  .indice {
+    top: 78px; z-index: 10; display: flex; gap: 6px; overflow-x: auto; padding: 8px; margin-inline: -8px;
+    border-radius: 999px; background: rgba(255,255,255,.75); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.95);
+    scrollbar-width: none;
+  }
+  .indice::-webkit-scrollbar { display: none; }
+  .indice p { display: none; }
+  .indice a { white-space: nowrap; padding: 8px 14px; border-radius: 999px; font-size: 14px; }
+  .indice a.activo::before { display: none; }
+  .indice a.activo { background: var(--tinta); color: var(--crema); border-color: var(--tinta); }
+  html { scroll-padding-top: 150px; }
+}
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .contenedor { padding-inline: 16px; }
+  .portada { padding-block: 44px 24px; }
+  .marca-nombre { display: none; }
+  .ficha { grid-template-columns: 1fr; gap: 2px; }
+  .ficha dd { margin-bottom: 8px; }
+  .plazos { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
