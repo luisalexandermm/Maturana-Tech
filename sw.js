@@ -5,7 +5,7 @@
    los visitantes reciban la versión nueva.
    ================================================================== */
 
-const VERSION = "maturana-tech-v2";
+const VERSION = "maturana-tech-v3";
 
 // Archivos propios que se guardan al instalar
 const ARCHIVOS = [
@@ -14,6 +14,8 @@ const ARCHIVOS = [
   "./legal.html",
   "./css/estilos.css",
   "./css/legal.css",
+  "./js/index.js",
+  "./js/legal.js",
   "./manifest.webmanifest",
   "./img/logo-simbolo.png",
   "./img/logo-simbolo-160.png",
