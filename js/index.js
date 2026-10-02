@@ -5,6 +5,13 @@
    ================================================================== */
 
 const NUMERO_WHATSAPP = "573145312045";
+
+/* Enlaces opcionales: si los dejas vacíos, no se muestran en la página */
+const PORTAFOLIO_FUNDADOR = "";   // ej: "https://luismaturana.vercel.app"
+const REDES = {
+  instagram: "",                  // ej: "https://instagram.com/maturanatech"
+  linkedin: ""                    // ej: "https://linkedin.com/company/maturanatech"
+};
 const hayGsap = typeof gsap !== "undefined";
 const hayThree = typeof THREE !== "undefined";
 const menosMovimiento = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -16,31 +23,86 @@ if (hayGsap && typeof ScrollTrigger !== "undefined") gsap.registerPlugin(ScrollT
    tipo de maqueta: "tienda", "app" o "mapa". */
 const proyectos = [
   {
-    nombre: "Vías Chocó", categoria: "Proyecto académico ciudadano", maqueta: "mapa", dominio: "viaschoco.org",
-    descripcion: "Sitio sin ánimo de lucro donde cualquier persona reporta, de forma anónima, el estado de las vías del Chocó y consulta los reportes de la comunidad.",
+    nombre: "Vías Chocó", categoria: "Plataforma digital · Movilidad", maqueta: "mapa", dominio: "viaschoco.org",
+    descripcion: "Plataforma ciudadana donde cualquier persona reporta, de forma anónima, el estado de las vías del Chocó y consulta los reportes de la comunidad en un solo lugar.",
     incluye: ["Reporte anónimo", "Gráficas de reportes", "Panel administrativo"],
     colores: { fondo: "#F3F0EA", texto: "#2B2622", principal: "#2E2A26", acento: "#E2B42B" }
   },
   {
-    nombre: "NoteFlow", categoria: "Organización académica", maqueta: "app", dominio: "noteflow.app",
-    descripcion: "Plataforma para estudiantes que reúne notas, materias, tareas y calendario en un solo lugar, con un asistente que ayuda a estudiar.",
-    incluye: ["Notas y materias", "Calendario", "Asistente para estudiar"],
-    colores: { fondo: "#F7F7FA", texto: "#23232B", principal: "#2A2A35", acento: "#7A72D6" }
-  },
-  {
-    nombre: "FitTrack", categoria: "Ejercicio en casa", maqueta: "app", dominio: "fittrack.app",
-    descripcion: "Rutinas según tu objetivo, tu nivel y el tiempo que tienes, con registro de progreso, medidas y fotos para ver cómo avanzas.",
-    incluye: ["Rutinas a tu medida", "Progreso y medidas", "Cuentas de usuario"],
+    nombre: "FitTrack", categoria: "Aplicación web · Fitness", maqueta: "app", dominio: "fittrack.app",
+    descripcion: "Rutinas de ejercicio en casa según el objetivo, el nivel y el tiempo disponible, con registro de progreso, medidas y fotos.",
+    incluye: ["Rutinas a la medida", "Progreso y medidas", "Cuentas de usuario"],
     colores: { fondo: "#F5F3EF", texto: "#2B2A27", principal: "#2B2A27", acento: "#C0714F" }
   },
   {
-    nombre: "Kairo", categoria: "Tienda de tenis", maqueta: "tienda", dominio: "kairo.co",
+    nombre: "Kairo", categoria: "E-commerce · Comercio digital", maqueta: "tienda", dominio: "kairo.co",
     portada: "Pisa con estilo",
     descripcion: "Tienda en línea de tenis con catálogo, carrito de compras y un panel administrativo con gráficas para seguir ventas e inventario.",
-    incluye: ["Catálogo de tenis", "Carrito de compras", "Panel con gráficas"],
+    incluye: ["Catálogo de productos", "Carrito de compras", "Panel con gráficas"],
     colores: { fondo: "#F4F4F2", texto: "#141414", principal: "#141414", acento: "#FF6A2B" }
+  },
+  {
+    nombre: "AgroMarket", categoria: "E-commerce · Comercio local", maqueta: "tienda", dominio: "agromarket.co",
+    portada: "Del campo a tu mesa",
+    descripcion: "Mercado digital que conecta a productores de Quibdó con compradores, con espacios separados para clientes, vendedores y administración.",
+    incluye: ["Productos del campo", "Clientes y vendedores", "Panel de administración"],
+    colores: { fondo: "#FAF4E8", texto: "#3A2A1C", principal: "#6B4423", acento: "#E9A23B" }
   }
 ];
+
+/* ---------- Maturana Lab ----------
+   Ideas que todavía evolucionan. "etapa" va de 0 a 4:
+   0 Idea · 1 Explorando · 2 Prototipo · 3 En desarrollo · 4 Lanzado */
+const ETAPAS = ["Idea", "Explorando", "Prototipo", "En desarrollo", "Lanzado"];
+const laboratorio = [
+  {
+    nombre: "GeoSentinel", area: "Monitoreo ambiental", etapa: 1,
+    descripcion: "Concepto tecnológico orientado al monitoreo de condiciones asociadas al riesgo de deslizamientos."
+  },
+  {
+    nombre: "NoteFlow", area: "Organización académica", etapa: 3,
+    descripcion: "Plataforma para estudiantes que reúne notas, materias, tareas y calendario en un solo lugar, con un asistente que ayuda a estudiar."
+  }
+];
+
+const grillaLab = document.getElementById("lab-grilla");
+laboratorio.forEach(function (idea) {
+  const tarjeta = document.createElement("article");
+  tarjeta.className = "lab-tarjeta vidrio";
+  tarjeta.innerHTML = `
+    <div class="lab-estado">
+      <span class="lab-pastilla etapa-${idea.etapa}">${ETAPAS[idea.etapa]}</span>
+      <span class="lab-progreso" aria-label="Etapa ${idea.etapa + 1} de ${ETAPAS.length}">
+        ${ETAPAS.map(function (_, i) { return '<i class="' + (i <= idea.etapa ? "hecho" : "") + '"></i>'; }).join("")}
+      </span>
+    </div>
+    <span class="lab-area">${idea.area}</span>
+    <h3>${idea.nombre}</h3>
+    <p>${idea.descripcion}</p>`;
+  grillaLab.appendChild(tarjeta);
+});
+// Última tarjeta: invitación a proponer una idea
+const invitacion = document.createElement("a");
+invitacion.className = "lab-tarjeta lab-invitacion abre-idea";
+invitacion.href = "#contacto";
+invitacion.dataset.tipo = "Prototipo";
+invitacion.innerHTML = `
+  <span class="lab-pastilla">Tu idea</span>
+  <h3>¿Tienes algo para explorar?</h3>
+  <p>Si tienes una idea que todavía no sabes cómo construir, la podemos explorar juntos.</p>
+  <span class="lab-invitacion-cta">Cuéntanos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>`;
+grillaLab.appendChild(invitacion);
+
+/* Enlaces opcionales del fundador y redes */
+if (PORTAFOLIO_FUNDADOR) {
+  const enlace = document.getElementById("enlace-fundador");
+  enlace.href = PORTAFOLIO_FUNDADOR;
+  enlace.hidden = false;
+}
+Object.keys(REDES).forEach(function (red) {
+  const enlace = document.getElementById("red-" + red);
+  if (enlace && REDES[red]) { enlace.href = REDES[red]; enlace.hidden = false; }
+});
 
 function crearMaqueta(p) {
   const barra = `<div class="m-barra"><i></i><i></i><i></i><span class="m-url">${p.dominio}</span></div>`;
@@ -296,7 +358,7 @@ const observadorSecciones = new IntersectionObserver(function (entradas) {
     enlacesMenu.forEach(function (a) { a.classList.toggle("activo", a.dataset.seccion === entrada.target.id); });
   });
 }, { rootMargin: "-45% 0px -50% 0px" });
-document.querySelectorAll("#trabajos, #servicios, #proceso, #sobre-mi, #preguntas").forEach(function (s) { observadorSecciones.observe(s); });
+document.querySelectorAll("#que-hacemos, #proyectos, #como-construimos, #lab, #nosotros").forEach(function (s) { observadorSecciones.observe(s); });
 
 /* ---------- 5. Cargador y entrada del hero ---------- */
 function entradaHero() {
@@ -305,6 +367,7 @@ function entradaHero() {
     .from("#lienzo-fluido", { opacity: 0, scale: 1.15, duration: 1.8, ease: "power2.out" }, 0)
     .from("#logo-centro", { scale: 0.4, rotateY: -160, opacity: 0, duration: 1.6, ease: "expo.out" }, 0.1)
     .fromTo("#hero-nombre img", { clipPath: "inset(0% 100% 0% 0%)", y: 20 }, { clipPath: "inset(0% 0% 0% 0%)", y: 0, duration: 1.3, ease: "expo.inOut", clearProps: "all" }, 0.45)
+    .fromTo("#hero-texto > *", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, stagger: 0.08, ease: "power3.out", clearProps: "all" }, 0.7)
     .from(".hero-datos", { opacity: 0, duration: 0.8 }, 0.8)
     .fromTo(".menu .marca-simbolo", { scale: 0, rotate: -90 }, { scale: 1, rotate: 0, duration: 1, ease: "back.out(1.6)", clearProps: "all" }, 0.2)
     .from("#marca-nombre .letras span", { yPercent: 110, duration: 0.7, stagger: 0.03, ease: "power3.out" }, 0.35)
@@ -368,11 +431,8 @@ if (hayGsap && !menosMovimiento) {
   manifiesto.innerHTML = manifiesto.textContent.split(" ").map(function (p) { return '<span class="palabra">' + p + "</span>"; }).join(" ");
   gsap.to("#manifiesto-texto .palabra", { color: "#16120F", stagger: 0.1, ease: "none", scrollTrigger: { trigger: manifiesto, start: "top 80%", end: "bottom 45%", scrub: true } });
 
-  // 7.4 Contadores
-  document.querySelectorAll(".contar").forEach(function (el) {
-    const obj = { n: 0 };
-    gsap.to(obj, { n: Number(el.dataset.hasta), duration: 1.6, ease: "power2.out", scrollTrigger: { trigger: el, start: "top 90%", once: true }, onUpdate: function () { el.textContent = Math.round(obj.n); } });
-  });
+  // 7.4 ¿Qué es?: el texto y la frase destacada suben al entrar
+  gsap.from(".que-es-pie > *", { y: 40, opacity: 0, duration: 1, stagger: 0.12, ease: "power3.out", scrollTrigger: { trigger: ".que-es-pie", start: "top 85%" } });
 
   // 7.5 Títulos: se revelan como una cortina que sube
   gsap.utils.toArray(".titulo-revela").forEach(function (h) {
@@ -384,6 +444,12 @@ if (hayGsap && !menosMovimiento) {
 
   // 7.7 Servicios: entran en abanico
   gsap.from(".servicio", { x: -60, rotate: -2, opacity: 0, duration: 1, stagger: 0.12, ease: "expo.out", scrollTrigger: { trigger: ".lista-servicios", start: "top 82%" } });
+
+  // 7.8 Lab, tecnología y enfoque: las tarjetas suben una tras otra
+  gsap.from(".lab-etapas li", { y: 20, opacity: 0, duration: 0.6, stagger: 0.08, ease: "power3.out", scrollTrigger: { trigger: ".lab-etapas", start: "top 88%" } });
+  gsap.from(".lab-tarjeta", { y: 50, opacity: 0, duration: 0.9, stagger: 0.12, ease: "expo.out", scrollTrigger: { trigger: ".lab-grilla", start: "top 85%" } });
+  gsap.from(".tec-grupo", { y: 50, opacity: 0, duration: 0.9, stagger: 0.12, ease: "expo.out", scrollTrigger: { trigger: ".tec-grilla", start: "top 85%" } });
+  gsap.from(".principio", { y: 60, opacity: 0, duration: 1, stagger: 0.14, ease: "expo.out", scrollTrigger: { trigger: ".enfoque-grilla", start: "top 85%" } });
 
   // 7.9 Foto: parallax y leve zoom
   gsap.fromTo("#foto-interior", { yPercent: -6, scale: 1.08 }, { yPercent: 8, scale: 1, ease: "none", scrollTrigger: { trigger: ".foto-marco", start: "top bottom", end: "bottom top", scrub: true } });
@@ -495,9 +561,9 @@ const campoMensaje = document.getElementById("idea-mensaje");
 
 function armarMensaje() {
   const tipo = document.querySelector('input[name="idea-tipo"]:checked').value;
-  let texto = "Hola Luis, soy " + (campoNombre.value.trim() || "...") + ".";
-  if (campoNegocio.value.trim()) texto += " Te escribo de " + campoNegocio.value.trim() + ".";
-  texto += " Quiero crear: " + tipo + ".";
+  let texto = "Hola Maturana Tech, soy " + (campoNombre.value.trim() || "...") + ".";
+  if (campoNegocio.value.trim()) texto += " Les escribo de " + campoNegocio.value.trim() + ".";
+  texto += " Quiero construir: " + tipo + ".";
   if (campoMensaje.value.trim()) texto += " " + campoMensaje.value.trim();
   ideaEnviar.href = "https://wa.me/" + NUMERO_WHATSAPP + "?text=" + encodeURIComponent(texto);
 }
@@ -523,10 +589,10 @@ ideaEnviar.addEventListener("click", function (e) {
   casillaAcepto.parentElement.classList.toggle("con-error", faltaAutorizacion);
   if (faltaNombre || faltaMensaje || faltaAutorizacion) {
     e.preventDefault();
-    if (faltaNombre && faltaMensaje) ideaError.textContent = "Escribe tu nombre y cuéntame un poco de tu idea.";
-    else if (faltaNombre) ideaError.textContent = "Escribe tu nombre para saber con quién hablo.";
-    else if (faltaMensaje) ideaError.textContent = "Cuéntame un poco de tu idea.";
-    else ideaError.textContent = "Marca la casilla de autorización para poder enviarme tus datos.";
+    if (faltaNombre && faltaMensaje) ideaError.textContent = "Escribe tu nombre y cuéntanos un poco de tu idea.";
+    else if (faltaNombre) ideaError.textContent = "Escribe tu nombre para saber con quién hablamos.";
+    else if (faltaMensaje) ideaError.textContent = "Cuéntanos un poco de tu idea.";
+    else ideaError.textContent = "Marca la casilla de autorización para poder enviarnos tus datos.";
     ideaError.hidden = false;
     (faltaNombre ? campoNombre : faltaMensaje ? campoMensaje : casillaAcepto).focus();
     if (hayGsap) gsap.fromTo(ideaPanel, { x: -8 }, { x: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Maturana Tech</title>
-<meta name="description" content="Maturana Tech: páginas web, tiendas en línea y aplicaciones hechas desde Quibdó, Chocó.">
+<meta name="description" content="Maturana Tech es un estudio tecnológico desde Chocó, Colombia, que diseña y desarrolla productos, plataformas y experiencias digitales.">
 
 <!-- PWA: datos para instalar el sitio como aplicación -->
 <link rel="manifest" href="manifest.webmanifest">
@@ -18,8 +18,8 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 <!-- Vista previa al compartir el enlace -->
-<meta property="og:title" content="Maturana Tech">
-<meta property="og:description" content="Páginas web, tiendas en línea y aplicaciones hechas desde Quibdó, Chocó.">
+<meta property="og:title" content="Maturana Tech · Ideas que toman forma digital">
+<meta property="og:description" content="Estudio tecnológico desde Chocó que diseña y desarrolla productos, plataformas y experiencias digitales.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
   <div class="cargador-centro">
     <img class="cargador-logo" src="img/logo-simbolo.png" alt="" width="404" height="327">
     <div class="cargador-barra"><i id="cargador-barra"></i></div>
-    <div class="cargador-cuenta"><span id="cargador-numero">000</span> · QUIBDÓ, CHOCÓ</div>
+    <div class="cargador-cuenta"><span id="cargador-numero">000</span> · CHOCÓ, COLOMBIA</div>
   </div>
 </div>
 
@@ -50,11 +50,11 @@
       <span class="marca-nombre" id="marca-nombre"><span class="letras"><span>M</span><span>A</span><span>T</span><span>U</span><span>R</span><span>A</span><span>N</span><span>A</span></span><small>TECH</small></span>
     </a>
     <ul class="menu-enlaces">
-      <li><a href="#trabajos" data-seccion="trabajos"><span class="rodar"><span>Trabajos</span></span></a></li>
-      <li><a href="#servicios" data-seccion="servicios"><span class="rodar"><span>Servicios</span></span></a></li>
-      <li><a href="#proceso" data-seccion="proceso"><span class="rodar"><span>Proceso</span></span></a></li>
-      <li><a href="#sobre-mi" data-seccion="sobre-mi"><span class="rodar"><span>Sobre mí</span></span></a></li>
-      <li><a href="#preguntas" data-seccion="preguntas"><span class="rodar"><span>Preguntas</span></span></a></li>
+      <li><a href="#que-hacemos" data-seccion="que-hacemos"><span class="rodar"><span>Qué hacemos</span></span></a></li>
+      <li><a href="#proyectos" data-seccion="proyectos"><span class="rodar"><span>Proyectos</span></span></a></li>
+      <li><a href="#como-construimos" data-seccion="como-construimos"><span class="rodar"><span>Proceso</span></span></a></li>
+      <li><a href="#lab" data-seccion="lab"><span class="rodar"><span>Lab</span></span></a></li>
+      <li><a href="#nosotros" data-seccion="nosotros"><span class="rodar"><span>Nosotros</span></span></a></li>
     </ul>
     <a class="boton boton-menu iman abre-idea" href="#contacto">Hablemos
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
@@ -68,15 +68,16 @@
 
 <nav class="panel-movil" id="panel-movil" aria-label="Menú principal">
   <ul>
-    <li><a class="grande" href="#trabajos"><small>01</small>Trabajos</a></li>
-    <li><a class="grande" href="#servicios"><small>02</small>Servicios</a></li>
-    <li><a class="grande" href="#proceso"><small>03</small>Proceso</a></li>
-    <li><a class="grande" href="#sobre-mi"><small>04</small>Sobre mí</a></li>
-    <li><a class="grande" href="#contacto"><small>05</small>Contacto</a></li>
+    <li><a class="grande" href="#que-hacemos"><small>01</small>Qué hacemos</a></li>
+    <li><a class="grande" href="#proyectos"><small>02</small>Proyectos</a></li>
+    <li><a class="grande" href="#como-construimos"><small>03</small>Proceso</a></li>
+    <li><a class="grande" href="#lab"><small>04</small>Lab</a></li>
+    <li><a class="grande" href="#nosotros"><small>05</small>Nosotros</a></li>
+    <li><a class="grande" href="#contacto"><small>06</small>Contacto</a></li>
   </ul>
   <div class="panel-movil-pie">
     <div class="panel-movil-acciones">
-      <a class="boton boton-principal abre-idea" href="#contacto">Cuéntame tu idea</a>
+      <a class="boton boton-principal abre-idea" href="#contacto">Cuéntanos tu idea</a>
       <button class="boton boton-claro instalar-app" type="button" hidden>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
         Instalar app
@@ -88,7 +89,7 @@
 </nav>
 
 <main>
-<!-- ============ HERO: logo en el centro ============ -->
+<!-- ============ 1. INICIO ============ -->
 <section class="hero" id="inicio">
   <canvas id="lienzo-fluido" aria-hidden="true"></canvas>
   <div class="hero-centro">
@@ -100,10 +101,20 @@
     <h1 class="hero-nombre" id="hero-nombre">
       <img src="img/logo-nombre.png" alt="Maturana Tech" width="784" height="165">
     </h1>
+    <div class="hero-texto" id="hero-texto">
+      <p class="hero-lema">Ideas que toman forma <span class="serif brillo">digital</span>.</p>
+      <p class="hero-bajada">Diseñamos y desarrollamos productos, plataformas y experiencias digitales para convertir ideas en soluciones reales.</p>
+      <ul class="hero-etiquetas" aria-label="Áreas">
+        <li>Productos digitales</li><li>Web</li><li>E-commerce</li><li>Tecnología</li>
+      </ul>
+      <a class="boton boton-principal iman" href="#que-hacemos">Explorar lo que hacemos
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
   </div>
   <div class="hero-datos">
     <div class="contenedor">
-      <span class="disponible"><i></i>Agenda abierta</span>
+      <span class="disponible"><i></i>Abiertos a nuevas ideas</span>
       <span id="hora-quibdo">Quibdó —</span>
       <span class="bajar ocultar-movil"><i></i>Desliza</span>
     </div>
@@ -115,27 +126,30 @@
   <div class="cinta">
     <div class="cinta-pista" id="cinta-pista">
       <div class="cinta-grupo">
-        <span>Páginas web</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
-        <span class="serif">Tiendas en línea</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
-        <span>Aplicaciones web</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
-        <span class="serif">Experiencias 3D</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
-        <span>Paneles administrativos</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <span>Productos digitales</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <span class="serif">Experiencias web</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <span>Plataformas</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <span class="serif">Comercio digital</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <span>Prototipos</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <span class="serif">Desde Chocó</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ============ MANIFIESTO ============ -->
-<section class="manifiesto">
+<!-- ============ 2. ¿QUÉ ES MATURANA TECH? ============ -->
+<section class="manifiesto" id="que-es">
   <div class="contenedor">
     <div class="manifiesto-caja">
-      <p class="etiqueta">Lo que hago</p>
-      <p class="manifiesto-texto" id="manifiesto-texto">Soy Luis Alexander Maturana, desarrollador full stack en Quibdó. Diseño cada proyecto desde cero, pensando en cómo compra tu cliente, y lo construyo para que cargue rápido, se vea bien en el celular y te deje vender por WhatsApp.</p>
+      <p class="etiqueta">¿Qué es Maturana Tech?</p>
+      <h2 class="manifiesto-texto" id="manifiesto-texto">Tecnología para convertir ideas en algo real.</h2>
     </div>
-    <div class="cifras">
-      <div class="cifra"><strong><span class="contar" data-hasta="15">15</span><sup class="brillo">+</sup></strong><span>proyectos diseñados y construidos</span></div>
-      <div class="cifra"><strong><span class="contar" data-hasta="100">100</span><sup class="brillo">%</sup></strong><span>adaptados a celular, tablet y computador</span></div>
-      <div class="cifra"><strong><span class="contar" data-hasta="1">1</span></strong><span>persona a cargo, de principio a fin</span></div>
+    <div class="que-es-pie">
+      <div class="que-es-texto">
+        <p>Maturana Tech es un <strong>estudio tecnológico digital</strong> enfocado en crear productos, plataformas y experiencias digitales.</p>
+        <p>Trabajamos desde la idea inicial hasta la construcción del producto, combinando diseño, tecnología y experimentación para desarrollar soluciones útiles, atractivas y funcionales.</p>
+      </div>
+      <p class="frase-destacada">Una idea puede quedarse en papel. Nosotros queremos llevarla a la <span class="brillo">pantalla</span>.</p>
     </div>
   </div>
 </section>
@@ -143,12 +157,52 @@
 <!-- ==================== ZONA TORNASOL ==================== -->
 <div class="zona-tornasol">
 
-<!-- ============ TRABAJOS ============ -->
-<section class="trabajos" id="trabajos">
+<!-- ============ 3. LO QUE HACEMOS ============ -->
+<section class="servicios" id="que-hacemos">
+  <div class="contenedor">
+    <div class="seccion-cabeza">
+      <div>
+        <p class="etiqueta">Lo que hacemos</p>
+        <h2 class="titulo-revela">Construimos soluciones <span class="serif brillo">digitales</span>.</h2>
+      </div>
+      <p>Cada proyecto empieza con una conversación. Si no sabes cuál de estas soluciones necesitas, cuéntanos tu idea y la definimos juntos.</p>
+    </div>
+    <div class="lista-servicios">
+      <a class="servicio vidrio abre-idea" href="#contacto" data-tipo="Experiencia web">
+        <span class="servicio-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></span>
+        <h3>Experiencias web</h3>
+        <p>Sitios web y experiencias digitales pensadas para comunicar, conectar y representar una marca.</p>
+        <span class="servicio-flecha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="servicio vidrio abre-idea" href="#contacto" data-tipo="Aplicación o plataforma">
+        <span class="servicio-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></span>
+        <h3>Aplicaciones y plataformas</h3>
+        <p>Productos web diseñados para resolver procesos, organizar información y ofrecer funcionalidades específicas.</p>
+        <span class="servicio-flecha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="servicio vidrio abre-idea" href="#contacto" data-tipo="Comercio digital">
+        <span class="servicio-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 7h14l-1.5 10h-11z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></span>
+        <h3>Comercio digital</h3>
+        <p>Tiendas y experiencias de compra digitales con catálogos, productos, pedidos y herramientas de gestión.</p>
+        <span class="servicio-flecha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="servicio vidrio abre-idea" href="#contacto" data-tipo="Prototipo">
+        <span class="servicio-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg></span>
+        <h3>Prototipos y experimentación</h3>
+        <p>Exploramos ideas, tecnologías y conceptos para convertirlos en prototipos funcionales.</p>
+        <span class="servicio-flecha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. NUESTROS PROYECTOS ============ -->
+<section class="trabajos" id="proyectos">
   <div class="contenedor trabajos-cabeza">
     <div>
-      <p class="etiqueta">Trabajos seleccionados</p>
-      <h2 class="titulo-revela">Proyectos con <span class="serif brillo">carácter</span>.</h2>
+      <p class="etiqueta">Nuestros proyectos</p>
+      <h2 class="titulo-revela">Ideas que ya están tomando <span class="serif brillo">forma</span>.</h2>
+      <p class="trabajos-intro">Cada proyecto nace de una necesidad, una oportunidad o una idea. Estos son algunos de los productos y experiencias que hemos construido.</p>
     </div>
     <div class="carrusel-controles">
       <span class="trabajos-contador" aria-live="polite">
@@ -171,99 +225,154 @@
   </div>
 </section>
 
-<!-- ============ SERVICIOS ============ -->
-<section class="servicios" id="servicios">
-  <div class="contenedor">
-    <div class="seccion-cabeza">
-      <div>
-        <p class="etiqueta">Servicios</p>
-        <h2 class="titulo-revela">Lo que puedo <span class="serif brillo">construir</span> para ti.</h2>
-      </div>
-      <p>Cada proyecto se cotiza según lo que necesitas. Si no sabes cuál de estos te sirve, escríbeme y lo definimos juntos.</p>
-    </div>
-    <div class="lista-servicios">
-      <a class="servicio vidrio abre-idea" href="#contacto" data-tipo="Página web">
-        <span class="servicio-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span>
-        <h3>Páginas web</h3>
-        <p>Para negocios y profesionales que quieren que los encuentren y les escriban. Diseño propio, botón de WhatsApp y ubicación.</p>
-        <span class="servicio-flecha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="servicio vidrio abre-idea" href="#contacto" data-tipo="Tienda en línea">
-        <span class="servicio-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 7h14l-1.5 10h-11z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></span>
-        <h3>Tiendas en línea</h3>
-        <p>Catálogo con precios en pesos, carrito y pedidos que llegan directo a tu WhatsApp, con un panel para cambiar productos tú mismo.</p>
-        <span class="servicio-flecha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="servicio vidrio abre-idea" href="#contacto" data-tipo="Aplicación web">
-        <span class="servicio-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></span>
-        <h3>Aplicaciones web</h3>
-        <p>Herramientas con cuentas de usuario y base de datos: reservas, inventario, pedidos o lo que tu operación necesite.</p>
-        <span class="servicio-flecha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="servicio vidrio abre-idea" href="#contacto" data-tipo="Experiencia 3D">
-        <span class="servicio-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/></svg></span>
-        <h3>Experiencias 3D</h3>
-        <p>Portadas animadas y productos en 3D para marcas que quieren destacar desde el primer segundo.</p>
-        <span class="servicio-flecha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROCESO ============ -->
-<section class="proceso" id="proceso">
+<!-- ============ 5. CÓMO CONSTRUIMOS ============ -->
+<section class="proceso" id="como-construimos">
   <div class="contenedor proceso-caja">
     <div class="proceso-titulo">
-      <p class="etiqueta">Cómo trabajo</p>
-      <h2>Cuatro pasos, <span class="serif brillo">sin sorpresas</span>.</h2>
-      <p>Sabes qué va a pasar, cuándo y cuánto cuesta antes de empezar.</p>
+      <p class="etiqueta">Cómo construimos</p>
+      <h2>De una idea a un <span class="serif brillo">producto</span>.</h2>
+      <p>Una forma de trabajo propia: pensar, crear, corregir y seguir mejorando.</p>
     </div>
     <div class="pasos" id="pasos">
       <span class="pasos-riel" aria-hidden="true"></span>
       <ol class="pasos-lista">
         <li class="paso">
-          <span class="paso-numero" aria-hidden="true">1</span>
-          <p class="paso-tiempo">Paso 1 · Día 1</p>
-          <h3>Conversamos</h3>
-          <p>Me cuentas de tu negocio, tus clientes y lo que quieres lograr. Por WhatsApp, videollamada o en persona en Quibdó.</p>
+          <span class="paso-numero" aria-hidden="true">01</span>
+          <p class="paso-tiempo">Fase 01</p>
+          <h3>Entender</h3>
+          <p>Identificamos la necesidad, el problema y el objetivo.</p>
         </li>
         <li class="paso">
-          <span class="paso-numero" aria-hidden="true">2</span>
-          <p class="paso-tiempo">Paso 2 · Días 2 y 3</p>
-          <h3>Propuesta clara</h3>
-          <p>Recibes por escrito qué incluye, el precio total y la fecha de entrega de cada parte. Sin cobros escondidos.</p>
+          <span class="paso-numero" aria-hidden="true">02</span>
+          <p class="paso-tiempo">Fase 02</p>
+          <h3>Imaginar</h3>
+          <p>Definimos cómo podría funcionar y cómo debería sentirse.</p>
         </li>
         <li class="paso">
-          <span class="paso-numero" aria-hidden="true">3</span>
-          <p class="paso-tiempo">Paso 3 · Según el alcance</p>
-          <h3>Construcción por etapas</h3>
-          <p>Trabajo por fases y te comparto un enlace para que revises cada avance y pidas ajustes antes de seguir.</p>
+          <span class="paso-numero" aria-hidden="true">03</span>
+          <p class="paso-tiempo">Fase 03</p>
+          <h3>Diseñar</h3>
+          <p>Construimos la experiencia, la estructura y la interfaz.</p>
         </li>
         <li class="paso">
-          <span class="paso-numero" aria-hidden="true">4</span>
-          <p class="paso-tiempo">Paso 4 · Después de entregar</p>
-          <h3>Publicación y apoyo</h3>
-          <p>Publicamos tu sitio con tu dominio, te enseño a usarlo y quedo disponible para dudas y mejoras.</p>
+          <span class="paso-numero" aria-hidden="true">04</span>
+          <p class="paso-tiempo">Fase 04</p>
+          <h3>Desarrollar</h3>
+          <p>Convertimos el concepto en un producto funcional.</p>
+        </li>
+        <li class="paso">
+          <span class="paso-numero" aria-hidden="true">05</span>
+          <p class="paso-tiempo">Fase 05</p>
+          <h3>Probar</h3>
+          <p>Probamos, corregimos y refinamos.</p>
+        </li>
+        <li class="paso">
+          <span class="paso-numero" aria-hidden="true">06</span>
+          <p class="paso-tiempo">Fase 06</p>
+          <h3>Evolucionar</h3>
+          <p>El producto puede seguir creciendo después de publicarse.</p>
         </li>
       </ol>
     </div>
   </div>
 </section>
 
-<!-- ============ SOBRE MÍ ============ -->
-<section class="sobre" id="sobre-mi">
+<!-- ============ 6. MATURANA LAB ============ -->
+<section class="lab" id="lab">
+  <div class="contenedor">
+    <div class="seccion-cabeza">
+      <div>
+        <p class="etiqueta">Maturana Lab</p>
+        <h2 class="titulo-revela">Ideas en <span class="serif brillo">movimiento</span>.</h2>
+      </div>
+      <p>Maturana Lab es nuestro espacio para experimentar, investigar y convertir nuevas ideas en conceptos y prototipos.</p>
+    </div>
+    <!-- Las etapas por las que pasa una idea. Cada tarjeta marca en cuál va. -->
+    <ol class="lab-etapas" aria-label="Etapas de una idea">
+      <li>Idea</li><li>Explorando</li><li>Prototipo</li><li>En desarrollo</li><li>Lanzado</li>
+    </ol>
+    <div class="lab-grilla" id="lab-grilla"></div>
+  </div>
+</section>
+
+<!-- ============ 7. TECNOLOGÍA ============ -->
+<section class="tecnologia" id="tecnologia">
+  <div class="contenedor">
+    <div class="seccion-cabeza">
+      <div>
+        <p class="etiqueta">Tecnología</p>
+        <h2 class="titulo-revela">La tecnología se adapta a la <span class="serif brillo">idea</span>.</h2>
+      </div>
+      <p>Usamos diferentes herramientas y tecnologías según lo que cada producto necesita.</p>
+    </div>
+    <!-- Muestra solo tecnologías que se usan en los proyectos actuales -->
+    <div class="tec-grilla">
+      <article class="tec-grupo vidrio">
+        <span class="tec-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
+        <h3>Desarrollo web</h3>
+        <ul class="tec-lista"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Tailwind CSS</li></ul>
+      </article>
+      <article class="tec-grupo vidrio">
+        <span class="tec-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="8" ry="2.5"/><path d="M4 5.5v13c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5v-13M4 12c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg></span>
+        <h3>Datos y backend</h3>
+        <ul class="tec-lista"><li>Node.js</li><li>Express</li><li>SQL</li><li>SQLite</li><li>PostgreSQL</li><li>Supabase</li></ul>
+      </article>
+      <article class="tec-grupo vidrio">
+        <span class="tec-icono"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/></svg></span>
+        <h3>Experiencias digitales</h3>
+        <ul class="tec-lista"><li>Three.js</li><li>GSAP</li><li>Visualizaciones</li><li>Interfaces interactivas</li><li>Apps instalables (PWA)</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. NUESTRO ENFOQUE ============ -->
+<section class="enfoque" id="enfoque">
+  <div class="contenedor">
+    <div class="enfoque-cabeza">
+      <p class="etiqueta">Nuestro enfoque</p>
+      <h2 class="titulo-revela">No hacemos tecnología por hacer <span class="serif brillo">tecnología</span>.</h2>
+      <p>Buscamos que cada producto tenga un propósito.</p>
+    </div>
+    <div class="enfoque-grilla">
+      <article class="principio">
+        <div class="composicion comp-util" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+        <h3>Útil</h3>
+        <p>La tecnología debe solucionar algo.</p>
+      </article>
+      <article class="principio">
+        <div class="composicion comp-claro" aria-hidden="true"><i></i><b></b></div>
+        <h3>Claro</h3>
+        <p>La experiencia debe ser fácil de entender.</p>
+      </article>
+      <article class="principio">
+        <div class="composicion comp-diferente" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b></b><i></i></div>
+        <h3>Diferente</h3>
+        <p>Cada producto debe tener una identidad propia.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. SOBRE MATURANA TECH ============ -->
+<section class="sobre" id="nosotros">
   <div class="contenedor sobre-caja">
-    <!-- Cambia el contenido de .foto-interior por tu foto: <img src="tu-foto.jpg" alt="Luis Alexander Maturana" style="width:100%;height:100%;object-fit:cover"> -->
     <div class="foto-marco">
-      <div class="foto-interior" id="foto-interior"><span class="foto-iniciales">LM</span></div>
-      <div class="foto-sello"><span>Luis Alexander Maturana</span><span>Quibdó, Chocó</span></div>
+      <div class="foto-interior" id="foto-interior"><img class="sobre-logo" src="img/logo-simbolo.png" alt="" width="404" height="327"></div>
+      <div class="foto-sello"><span>Maturana Tech</span><span>Chocó, Colombia</span></div>
     </div>
     <div class="sobre-texto">
-      <p class="etiqueta">Sobre mí</p>
-      <h2 class="titulo-revela">Programo desde el Chocó, para que el Pacífico <span class="serif brillo">también</span> esté en línea.</h2>
-      <p>Soy <strong>desarrollador full stack</strong> y estudiante de <strong>Ingeniería de Sistemas</strong>. Aprendí buena parte de lo que sé por mi cuenta, proyecto tras proyecto, y hoy construyo tiendas, aplicaciones y sitios para marcas y negocios.</p>
-      <p>Sé cómo se mueve un negocio aquí: los clientes compran por WhatsApp, la señal no siempre ayuda y las cosas tienen que funcionar a la primera. Por eso cuido que todo sea rápido, claro y fácil de usar.</p>
-      <p class="cita">Hablas directamente con quien diseña y escribe el código.</p>
+      <p class="etiqueta">Sobre Maturana Tech</p>
+      <h2 class="titulo-revela">Una empresa que nace desde <span class="serif brillo">Chocó</span>.</h2>
+      <p>Maturana Tech nace como una iniciativa tecnológica enfocada en crear productos digitales y explorar nuevas formas de usar la tecnología para resolver problemas y desarrollar ideas.</p>
+      <p class="cita">Nuestro punto de partida es Chocó, pero nuestras ideas no tienen por qué quedarse allí.</p>
+      <div class="fundador">
+        <span><small>Fundador</small>Luis Alexander Maturana</span>
+        <!-- Escribe la dirección del portafolio personal en PORTAFOLIO_FUNDADOR (js/index.js) -->
+        <a class="fundador-enlace" id="enlace-fundador" href="#" target="_blank" rel="noopener" hidden>Conocer al fundador
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -277,40 +386,60 @@
     </div>
     <div class="lista-preguntas">
       <div class="pregunta vidrio">
-        <button type="button" aria-expanded="false">¿Cuánto cuesta una página web?<span class="pregunta-signo" aria-hidden="true">+</span></button>
-        <div class="pregunta-respuesta"><p>Depende de lo que necesites: no cuesta lo mismo una página de presentación que una tienda con panel administrativo. Después de conversar te envío una propuesta con el precio total por escrito.</p></div>
+        <button type="button" aria-expanded="false">¿Puedo llegar solo con una idea?<span class="pregunta-signo" aria-hidden="true">+</span></button>
+        <div class="pregunta-respuesta"><p>Sí. Muchos proyectos empiezan con una conversación. Te ayudamos a darle forma a la idea antes de construir.</p></div>
+      </div>
+      <div class="pregunta vidrio">
+        <button type="button" aria-expanded="false">¿Cuánto cuesta un proyecto?<span class="pregunta-signo" aria-hidden="true">+</span></button>
+        <div class="pregunta-respuesta"><p>Depende de lo que necesites: no cuesta lo mismo un sitio de presentación que una plataforma con panel administrativo. Después de conversar te enviamos una propuesta con el precio total por escrito.</p></div>
       </div>
       <div class="pregunta vidrio">
         <button type="button" aria-expanded="false">¿Cuánto tiempo tarda?<span class="pregunta-signo" aria-hidden="true">+</span></button>
-        <div class="pregunta-respuesta"><p>Una página sencilla puede estar lista en pocos días. Una tienda o una aplicación toma más tiempo porque se construye por etapas. En la propuesta te indico la fecha de cada entrega.</p></div>
+        <div class="pregunta-respuesta"><p>Un sitio sencillo puede estar listo en pocos días. Una tienda o una plataforma toma más tiempo porque se construye por etapas. En la propuesta indicamos la fecha de cada entrega.</p></div>
       </div>
       <div class="pregunta vidrio">
-        <button type="button" aria-expanded="false">¿El dominio y la página quedan a mi nombre?<span class="pregunta-signo" aria-hidden="true">+</span></button>
-        <div class="pregunta-respuesta"><p>Sí. El dominio, los archivos y los accesos son tuyos. Si un día decides trabajar con otra persona, puedes llevarte todo.</p></div>
+        <button type="button" aria-expanded="false">¿El dominio y el producto quedan a mi nombre?<span class="pregunta-signo" aria-hidden="true">+</span></button>
+        <div class="pregunta-respuesta"><p>Sí. El dominio, los archivos y los accesos son tuyos. Si un día decides trabajar con otro equipo, puedes llevarte todo.</p></div>
       </div>
       <div class="pregunta vidrio">
-        <button type="button" aria-expanded="false">¿Trabajas con clientes fuera de Quibdó?<span class="pregunta-signo" aria-hidden="true">+</span></button>
-        <div class="pregunta-respuesta"><p>Sí. Todo el proceso se puede hacer por WhatsApp y videollamada, desde cualquier parte de Colombia.</p></div>
+        <button type="button" aria-expanded="false">¿Trabajan con clientes fuera de Chocó?<span class="pregunta-signo" aria-hidden="true">+</span></button>
+        <div class="pregunta-respuesta"><p>Sí. Todo el proceso puede hacerse por WhatsApp y videollamada, desde cualquier parte de Colombia.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CIERRE ============ -->
+<!-- ============ 10. CONTACTO ============ -->
 <section class="cierre" id="contacto">
   <div class="contenedor">
     <p class="etiqueta">Contacto</p>
     <div class="cierre-titulo">
-      <h2><span class="palabra-cierre">¿Hablamos</span> <span class="palabra-cierre">de</span><br><span class="palabra-cierre">tu</span> <span class="palabra-cierre serif brillo">proyecto</span><span class="palabra-cierre">?</span></h2>
-      <a class="boton-circular iman" href="https://wa.me/573145312045?text=Hola%20Luis%2C%20vi%20Maturana%20Tech%20y%20quiero%20hablar%20de%20un%20proyecto." target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+      <div class="cierre-texto">
+        <h2><span class="palabra-cierre">¿Qué</span> <span class="palabra-cierre">quieres</span><br><span class="palabra-cierre serif brillo">construir</span><span class="palabra-cierre">?</span></h2>
+        <p>Cuéntanos tu idea, proyecto o problema. Podemos comenzar desde una conversación.</p>
+        <a class="boton boton-principal iman abre-idea" href="#contacto">Cuéntanos tu idea
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <a class="boton-circular iman" href="https://wa.me/573145312045?text=Hola%20Maturana%20Tech%2C%20quiero%20hablar%20de%20una%20idea." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
         <svg class="anillo" viewBox="0 0 200 200" aria-hidden="true">
           <defs><path id="circulo-texto" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
-          <text><textPath href="#circulo-texto">Escríbeme por WhatsApp · Escríbeme por WhatsApp ·</textPath></text>
+          <text><textPath href="#circulo-texto">Escríbenos por WhatsApp · Escríbenos por WhatsApp ·</textPath></text>
         </svg>
         <span class="boton-circular-centro">
           <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
         </span>
       </a>
+    </div>
+    <div class="canales">
+      <span class="canales-marca"><b>Maturana Tech</b> · Chocó, Colombia</span>
+      <nav class="canales-lista" aria-label="Canales de contacto">
+        <a href="mailto:alrxandermaturana76@gmail.com">Correo</a>
+        <a href="https://wa.me/573145312045" target="_blank" rel="noopener">WhatsApp</a>
+        <!-- Se muestran solo si escribes la dirección en REDES (js/index.js) -->
+        <a id="red-instagram" href="#" target="_blank" rel="noopener" hidden>Instagram</a>
+        <a id="red-linkedin" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a>
+      </nav>
     </div>
   </div>
 </section>
@@ -321,15 +450,16 @@
     <div class="pie-arriba">
       <div class="pie-marca">
         <img class="pie-logo" src="img/logo-completo.png" alt="Maturana Tech" width="796" height="551">
-        <p>Páginas web, tiendas en línea y aplicaciones diseñadas y construidas desde Quibdó para todo Colombia.</p>
-        <span class="pie-estado"><i></i>Agenda abierta</span>
+        <p>Estudio tecnológico que convierte ideas en productos, plataformas y experiencias digitales. Desde Chocó, Colombia.</p>
+        <span class="pie-estado"><i></i>Abiertos a nuevas ideas</span>
       </div>
       <div class="pie-columna">
         <h4>Navegar</h4>
-        <a href="#trabajos"><span class="rodar"><span>Trabajos</span></span></a>
-        <a href="#servicios"><span class="rodar"><span>Servicios</span></span></a>
-        <a href="#proceso"><span class="rodar"><span>Proceso</span></span></a>
-        <a href="#sobre-mi"><span class="rodar"><span>Sobre mí</span></span></a>
+        <a href="#que-hacemos"><span class="rodar"><span>Qué hacemos</span></span></a>
+        <a href="#proyectos"><span class="rodar"><span>Proyectos</span></span></a>
+        <a href="#como-construimos"><span class="rodar"><span>Cómo construimos</span></span></a>
+        <a href="#lab"><span class="rodar"><span>Maturana Lab</span></span></a>
+        <a href="#nosotros"><span class="rodar"><span>Nosotros</span></span></a>
       </div>
       <div class="pie-columna">
         <h4>WhatsApp</h4>
@@ -340,14 +470,14 @@
       <div class="pie-columna">
         <h4>Ubicación</h4>
         <span>Quibdó, Chocó, Colombia</span>
-        <span style="font-weight:500">Trabajo con clientes de todo el país</span>
+        <span style="font-weight:500">Trabajamos con clientes de todo el país</span>
         <h4 style="margin-top:14px">Hora local</h4>
         <span id="hora-pie">—</span>
       </div>
     </div>
     <div class="pie-gigante" id="pie-gigante" aria-hidden="true"><span>M</span><span>a</span><span>t</span><span>u</span><span>r</span><span>a</span><span>n</span><span>a</span><span class="brillo">.</span><span>T</span><span>e</span><span>c</span><span>h</span></div>
     <div class="pie-abajo">
-      <span>© <span id="anio">2026</span> Maturana Tech · Luis Alexander Maturana</span>
+      <span>© <span id="anio">2026</span> Maturana Tech</span>
       <nav aria-label="Enlaces legales">
         <a href="legal.html#privacidad">Privacidad y datos</a>
         <a href="legal.html#cookies">Cookies</a>
@@ -379,34 +509,34 @@
 
 <div class="idea-panel" id="idea-panel" role="dialog" aria-labelledby="idea-titulo" hidden>
   <div class="idea-cabeza">
-    <h2 id="idea-titulo">Cuéntame tu <span class="serif brillo">idea</span></h2>
+    <h2 id="idea-titulo">Cuéntanos tu <span class="serif brillo">idea</span></h2>
     <button class="idea-cerrar" id="idea-cerrar" type="button" aria-label="Cerrar formulario">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
   </div>
-  <p class="idea-intro">Llena estos datos y se arma un mensaje listo para enviarme por WhatsApp. Te respondo personalmente.</p>
+  <p class="idea-intro">Completa estos datos y se arma un mensaje listo para enviarnos por WhatsApp. Te respondemos personalmente.</p>
   <form class="idea-formulario" id="idea-formulario" novalidate>
     <div class="idea-campo">
       <label for="idea-nombre">Tu nombre</label>
       <input class="idea-entrada" id="idea-nombre" type="text" maxlength="60" autocomplete="name" placeholder="Ej: Viviana Mosquera">
     </div>
     <fieldset class="idea-grupo">
-      <legend>¿Qué quieres crear?</legend>
+      <legend>¿Qué quieres construir?</legend>
       <div class="idea-opciones">
-        <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Página web" checked><span>Página web</span></label>
-        <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Tienda en línea"><span>Tienda en línea</span></label>
-        <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Aplicación web"><span>Aplicación</span></label>
-        <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Experiencia 3D"><span>Experiencia 3D</span></label>
+        <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Experiencia web" checked><span>Experiencia web</span></label>
+        <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Aplicación o plataforma"><span>Aplicación o plataforma</span></label>
+        <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Comercio digital"><span>Comercio digital</span></label>
+        <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Prototipo"><span>Prototipo</span></label>
         <label class="idea-opcion"><input type="radio" name="idea-tipo" value="Otra cosa"><span>Otra cosa</span></label>
       </div>
     </fieldset>
     <div class="idea-campo">
-      <label for="idea-negocio">Negocio o marca <span style="font-weight:400;color:var(--tinta-suave)">(opcional)</span></label>
+      <label for="idea-negocio">Negocio, marca u organización <span style="font-weight:400;color:var(--tinta-suave)">(opcional)</span></label>
       <input class="idea-entrada" id="idea-negocio" type="text" maxlength="60" autocomplete="organization" placeholder="Ej: Panadería La Esquina">
     </div>
     <div class="idea-campo">
-      <label for="idea-mensaje">Cuéntame un poco</label>
-      <textarea class="idea-entrada" id="idea-mensaje" rows="3" maxlength="500" placeholder="Qué vendes, a quién y qué te gustaría que hiciera tu página"></textarea>
+      <label for="idea-mensaje">Cuéntanos un poco</label>
+      <textarea class="idea-entrada" id="idea-mensaje" rows="3" maxlength="500" placeholder="Qué idea tienes, para quién es y qué te gustaría lograr"></textarea>
     </div>
     <label class="idea-acepto" for="idea-acepto">
       <input id="idea-acepto" type="checkbox">
