@@ -449,6 +449,7 @@ if (hayGsap && !menosMovimiento) {
   gsap.from(".lab-etapas li", { y: 20, opacity: 0, duration: 0.6, stagger: 0.08, ease: "power3.out", scrollTrigger: { trigger: ".lab-etapas", start: "top 88%" } });
   gsap.from(".lab-tarjeta", { y: 50, opacity: 0, duration: 0.9, stagger: 0.12, ease: "expo.out", scrollTrigger: { trigger: ".lab-grilla", start: "top 85%" } });
   gsap.from(".tec-grupo", { y: 50, opacity: 0, duration: 0.9, stagger: 0.12, ease: "expo.out", scrollTrigger: { trigger: ".tec-grilla", start: "top 85%" } });
+  gsap.from(".tec-lista li", { y: 16, opacity: 0, duration: 0.55, stagger: 0.05, ease: "power3.out", scrollTrigger: { trigger: ".tec-grilla", start: "top 80%" } });
   gsap.from(".principio", { y: 60, opacity: 0, duration: 1, stagger: 0.14, ease: "expo.out", scrollTrigger: { trigger: ".enfoque-grilla", start: "top 85%" } });
 
   // 7.9 Foto: parallax y leve zoom

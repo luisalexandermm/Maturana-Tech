@@ -704,7 +704,19 @@ a:hover > .rodar span { transform: translateY(-1.35em); }
 .tec-icono { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: var(--blanco); border: 1px solid var(--linea); color: var(--coral); }
 .tec-grupo h3 { font-size: 26px; letter-spacing: -0.035em; }
 .tec-lista { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.tec-lista li { padding: 7px 13px; border-radius: 999px; background: rgba(255,255,255,.75); border: 1px solid var(--linea); font-size: 14px; font-weight: 500; }
+.tec-lista li {
+  padding: 7px 13px; border-radius: 999px; background: rgba(255,255,255,.75);
+  border: 1px solid var(--linea); font-size: 14px; font-weight: 500;
+  transform: translateY(0); opacity: 1;
+  transition: transform .35s ease, background .35s ease, border-color .35s ease, box-shadow .35s ease, color .35s ease;
+}
+.tec-lista li:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(255,249,243,.9));
+  border-color: rgba(238,106,75,.5);
+  box-shadow: 0 12px 22px -16px rgba(90,60,50,.45);
+  color: var(--tinta);
+}
 
 /* Nuestro enfoque: tres principios con composiciones gráficas */
 .enfoque { padding-block: 0 140px; position: relative; }
